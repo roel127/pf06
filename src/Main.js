@@ -3,6 +3,7 @@ import App from './components/App';
 import Home from "./components/Home";
 import Cart from "./components/Cart";
 import ProductList from "./components/ProductList";
+import Product from "./components/Product";
 
 export default function Main(){
   return(
@@ -12,6 +13,7 @@ export default function Main(){
           <Route path="/" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/product" element={<ProductList />} />
+          <Route path="/detail" element={<Product />} />
         </Routes>
       </App>
     </BrowserRouter>
