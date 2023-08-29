@@ -10,7 +10,7 @@ function App( {children} ) {
     <div id="main">
       {children}
     </div>
-    <Recent />
+    {/* <Recent /> */}
     <Footer />
     </div>
   );
