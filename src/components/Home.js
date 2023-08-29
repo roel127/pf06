@@ -1,5 +1,6 @@
 import './Home.css';
 import data from '../product.json';
+import { Link } from 'react-router-dom';
 // swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -48,11 +49,11 @@ export default function Home(){
             return(
               <SwiperSlide key={item.id}>
                 <figure>
-                  <img src={item.imgUrl} alt={item.name}/>
+                  <Link to=""><img src={item.imgUrl} alt={item.name}/></Link>
                   <span>{index+1}</span>
                   <figcaption>
                     <dl>
-                      <dt>{item.name}</dt>
+                      <dt><Link to="">{item.name}</Link></dt>
                       <dd>base</dd>
                       <dd>{item.price}</dd>
                     </dl>
@@ -80,11 +81,11 @@ export default function Home(){
             return(
               <SwiperSlide key={item.id}>
                 <figure>
-                  <img src={item.imgUrl} alt={item.name}/>
+                  <Link to=""><img src={item.imgUrl} alt={item.name}/></Link>
                   <span>New</span>
                   <figcaption>
                     <dl>
-                      <dt>{item.name}</dt>
+                      <dt><Link to="">{item.name}</Link></dt>
                       <dd>base</dd>
                       <dd>{item.price}</dd>
                     </dl>
