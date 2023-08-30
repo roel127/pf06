@@ -24,9 +24,21 @@
 }
 
 .productList{
+  padding: 30px 0 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  position: relative;
+  
+}
+.productList>span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #bbb;
+}
+.productList>span>b{
+  color: #000;
 }
 .productList>figure{
   width: 23%;
