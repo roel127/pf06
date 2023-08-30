@@ -1,8 +1,6 @@
 import './Product.css';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import { Navigation } from 'swiper/modules';
+import { HiStar, HiMinus, HiPlus, HiGift} from 'react-icons/hi';
+
 
 export function ProductDetail(){
   return(
@@ -133,23 +131,7 @@ export function ProductGuide(){
 }
 export function ProductReview(){
   return(
-    <div>
-
-
-
-    {/* <pre>
-      {`
-      처음 뿌리자마자 났던 향은 블랙베리의 달콤함입니다. 10~20초가량은 달콤한 블랙베리의 향이 지배적이고 이후 블랙 커런트의 쌉쌀함이 블랙베리 사이사이를 터치해주며 달콤함이 지배적이었던 분위기에 변주를 줍니다. 블랙 커런트의 향이 점점 날아가면서 향수의 주인공인 산딸기(wild berry)가 본연의 모습을 드러냅니다. 미들 노트에서도 역시 단순하다고 느껴질 수 있는 베리류의 달콤함이 쭉 유지되는 것이 아닌 블랙 커런트 새싹의 쌉쌀한 풀의 느낌이 베리의 독주에 조금씩 스며 들어가면서 진부할 수 있는 달콤함에 포인트를 줍니다. 이는 마치 산딸기가 무성하게 열린 따뜻한 여름날의 농장을 연상케 합니다. 베리와 블랙 커런트의 합주 이후 베이스 노트에서는 머스크+우디 조합의 향이 납니다. 우디가 머스크에 비해 존재감이 더 있는 편이긴 하나 그렇다고 무거운 우디는 아닙니다. 햇볕 아래 아주 잘 말린 가벼운 우디의 느낌입니다. 기온이 높은 날 다소 답답하다고 느껴질 수 있는 머스크의 향을 가벼운 느낌의 우디가 잘 잡아주어 마냥 답답하지 않게 만들어 줍니다.
-
-      결론적으로 베리의 달콤함과 블랙 커런트의 달콤쌉쌀함을 조화시키고자 했던 조향사의 의도가 느껴지는 성공적인 향수입니다.
-      한여름 따듯한 햇살을 맞으며 산딸기 농장을 걷는 폴라로이드 속 연인들의 모습이 연상이 되고 마무리까지 하나의 향조가 마냥 튀지 않는 밸런스가 잘 잡혀있는 향수라고 생각됩니다.
-      
-      지속발향은 무난하며 개인적으로 사계절 데일리로 뿌려도 문제 없을 향이라고 생각합니다.
-      
-      제가 향수에서 느꼈던 느낌을 리뷰를 보시는 분들께서 시각화하시기 쉽게 어울릴만한 사진을 함께 첨부합니다.
-      `}
-    </pre> */}
-    </div>
+    <></>
   )
 }
 
@@ -160,21 +142,34 @@ export default function Product(){
         <div className='topView'>
           <img src='./images/keiko/keiko_wild_berries.jpeg' alt='' />
           <ul>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>
+              <ul>
+                <li>상품만족도</li>
+                <li><span><HiStar /></span>5.0 /5</li>
+                <li><span>5</span> 개의 리뷰가 있습니다.</li>
+                <li><button type='button'>리뷰 작성하기</button></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li>5점 <span>100%</span></li>
+                <li>4점 <span>0%</span></li>
+                <li>3점 <span>0%</span></li>
+                <li>2점 <span>0%</span></li>
+                <li>1점 <span>0%</span></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li>성별</li>
+                <li>남녀공용50.0%&#30;2명&#41;</li>
+                <li>여성50.0%&#30;2명&#41;</li>
+              </ul>
+            </li>
           </ul>
-          <div>
-            <Swiper
-            navigation={true} 
-            modules={[Navigation]} 
-            className="mySwiper"
-            >
-              <SwiperSlide>Slide 1</SwiperSlide>
-              <SwiperSlide>Slide 2</SwiperSlide>
-              <SwiperSlide>Slide 3</SwiperSlide>
-          </Swiper>
-          </div>
+          {/* <div>
+
+          </div> */}
         </div>
         <div className='topInfo'>
           <dl>
@@ -205,19 +200,19 @@ export default function Product(){
               <tr>
                 <td>name</td>
                 <td>
-                  <button type='button'>-</button>
-                  <span>count</span>
-                  <button type='button'>+</button>
+                  <button type='button'><HiMinus /></button>
+                  <span>1</span>
+                  <button type='button'><HiPlus /></button>
                 </td>
-                <td>price</td>
+                <td>000,000원</td>
               </tr>
             </tbody>
           </table>
           <p>
             <span>총 상품금액</span>
-            <span>000,000원 &#40;0개&#41;</span>
+            <span>000,000원 <b>&#40;0개&#41;</b></span>
           </p>
-          <p><button>선물하기</button></p>
+          <p><button><HiGift />선물하기</button></p>
           <p>
             <button>바로 구매</button>
             <button>장바구니</button>
