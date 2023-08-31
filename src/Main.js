@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import Cart from "./components/Cart";
 import ProductList from "./components/ProductList";
 import Product from "./components/Product";
+import Magazine from "./components/Magazine";
 
 export default function Main(){
   return(
@@ -14,6 +15,7 @@ export default function Main(){
           <Route path="/cart" element={<Cart />} />
           <Route path="/product" element={<ProductList />} />
           <Route path="/detail" element={<Product />} />
+          <Route path="/magazine" element={<Magazine />} />
         </Routes>
       </App>
     </BrowserRouter>
