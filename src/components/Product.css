@@ -2,7 +2,7 @@
   width: 1300px;
   margin: 0 auto;
 }
-#detail>section{
+#detail>section:nth-of-type(1){
   display: flex;
 }
 .topView{
@@ -226,4 +226,88 @@
 .topInfo>p:nth-of-type(3)>button:last-child{
   background-color: #fff;
   border: 1px solid #bbb;
+}
+
+/*  */
+#detail>section:nth-of-type(2){
+  width: 1300px;
+  margin: 0 auto;
+}
+.bottomBtn{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.bottomBtn>button{
+  flex-grow: 1;
+  font-size: 20px;
+  background-color: #fff;
+  line-height: 60px;
+  border: 1px solid #bbb;
+  border-bottom: 2px solid #000;
+  cursor: pointer;
+}
+.bottomBtn>button:nth-of-type(1), .bottomBtn>button:nth-of-type(2){
+  border-right: none;
+}
+.bottomInfo>img{
+  display: block;
+  width: 80%;
+  margin: 0 auto 200px;
+}
+.bottomInfo>div>p{
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #333;
+}
+.tableCont>p{
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.tableCont>table{
+  width: 100%;
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+  margin-bottom: 25px;
+}
+.tableCont>table>tbody th{
+  width: 20%;
+  text-align: start;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 20px 10px;
+  font-size: 16px;
+}
+.tableCont>table>tbody td{
+  width: 80%;
+  padding: 10px 15px;
+  font-size: 13px;
+  border: 1px solid #ddd;
+  color: #999;
+  line-height: 16px;
+}
+.tableCont:nth-of-type(1)>table>tbody td>ul>li:first-child{
+  margin-bottom: 25px;
+}
+.tableCont:nth-of-type(2)>table>tbody tr:nth-of-type(5) td>ul>li:nth-of-type(3){
+  margin-bottom: 20px;
+}
+.tableCont:nth-of-type(2)>table>tbody tr:nth-of-type(5) td>ul>li b{
+  font-size: 14px;
+  font-weight: bold;
+}
+.tableCont:nth-of-type(3)>table>tbody td>ul>li{
+  margin-bottom: 20px;
+}
+.tableCont:nth-of-type(3)>table>tbody td>ul>li dt{
+  font-size: 14px;
+  font-weight: bold;
+}
+.tableCont:nth-of-type(3)>table>tbody td>ul>li:nth-of-type(1) dd>span{
+  display: block;
+  text-indent: 5px;
 }

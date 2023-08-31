@@ -4,12 +4,12 @@ import { HiStar, HiMinus, HiPlus, HiGift} from 'react-icons/hi';
 
 export function ProductDetail(){
   return(
-    <img src='' alt='' />
+    <img src='./images/keiko/keiko_all.jpeg' alt='' />
   )
 }
 export function ProductGuide(){
   return(
-    <div>
+    <div className='guide'>
       <p>상품구매안내</p>
       <div className='tableCont'>
         <p>결제 안내</p>
@@ -60,7 +60,7 @@ export function ProductGuide(){
                     <span>고객님께서 주문하신 상품은 입금 확인 후 배송해 드립니다. 다만, 상품종류에 따라서 상품의 배송이 다소 지연될 수 있습니다.</span>
                   </li>
                   <li>
-                    국내배송
+                    <b>국내배송</b>
                     <br />
                     <span>배송비: 무료 배송&#40;일부상품 제외&#41;</span>
                     <br />
