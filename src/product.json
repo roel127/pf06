@@ -3,7 +3,7 @@
     {
       "id": "0",
       "name": "케이코 메쉐리 와일드 베리즈 오 드 퍼퓸 100ml",
-      "base:": ["Floral", "Fruity"],
+      "base": ["Floral", "Fruity"],
       "price": "220,000",
       "giftWrap": true,
       "delivery": true,
@@ -12,7 +12,7 @@
     {
       "id": "1",
       "name": "케이코 세도나 블루 오 드 퍼퓸 100ml",
-      "base:": ["Citrus", "Aromatic"],
+      "base": ["Citrus", "Aromatic"],
       "price": "220,000",
       "giftWrap": true,
       "delivery": true,
@@ -21,7 +21,7 @@
     {
       "id": "2",
       "name": "케이코 메쉐리 포 드 페쉐 오 드 퍼퓸 100ml",
-      "base:": ["Fruity", "Powdery"],
+      "base": ["Fruity", "Powdery"],
       "price": "220,000",
       "giftWrap": true,
       "delivery": true,
@@ -30,7 +30,7 @@
     {
       "id": "3",
       "name": "케이코 메쉐리 모가도르 오 드 퍼퓸 100ml",
-      "base:": ["Floral", "Green"],
+      "base": ["Floral", "Green"],
       "price": "220,000",
       "giftWrap": true,
       "delivery": true,
@@ -39,7 +39,7 @@
     {
       "id": "4",
       "name": "케이코 메쉐리 아일스 루엥뗀느 오 드 퍼퓸 100ml",
-      "base:": ["Floral", "Fresh"],
+      "base": ["Floral", "Fresh"],
       "price": "220,000",
       "giftWrap": true,
       "delivery": true,
@@ -48,7 +48,7 @@
     {
       "id": "5",
       "name": "케이코 메쉐리 하나에 오 드 퍼퓸 100ml",
-      "base:": ["Floral", "Fresh"],
+      "base": ["Floral", "Fresh"],
       "price": "220,000",
       "giftWrap": true,
       "delivery": true,
@@ -57,7 +57,7 @@
     {
       "id": "6",
       "name": "케이코 메쉐리 클레어 옵스큐어 오 드 퍼퓸 100ml",
-      "base:": ["Floral"],
+      "base": ["Floral"],
       "price": "220,000",
       "giftWrap": true,
       "delivery": true,
@@ -66,7 +66,7 @@
     {
       "id": "7",
       "name": "케이코 메쉐리 로쿰 퍼퓸 뒤 수와르 100ml",
-      "base:": ["Sweet", "Gourmand"],
+      "base": ["Sweet", "Gourmand"],
       "price": "330,000",
       "giftWrap": true,
       "delivery": true,
@@ -75,7 +75,7 @@
     {
       "id": "8",
       "name": "케이코 메쉐리 발 드 로지즈 오 드 퍼퓸 100ml",
-      "base:": ["Floral", "Powdery"],
+      "base": ["Floral", "Powdery"],
       "price": "260,000",
       "giftWrap": true,
       "delivery": true,
@@ -86,7 +86,7 @@
     {
       "id": "10",
       "name": "라몬 모네갈 체리 머스크 오드퍼퓸 50ml",
-      "base:": ["Musky", "Fruity"],
+      "base": ["Musky", "Fruity"],
       "price": "250,000",
       "giftWrap": false,
       "delivery": true,
@@ -95,7 +95,7 @@
     {
       "id": "11",
       "name": "라몬 모네갈 코튼 머스크 오드퍼퓸 50ml",
-      "base:": ["Musky", "Floral"],
+      "base": ["Musky", "Floral"],
       "price": "250,000",
       "giftWrap": false,
       "delivery": true,
@@ -104,7 +104,7 @@
     {
       "id": "12",
       "name": "라몬 모네갈 아갈 머스크 오드퍼퓸 50ml",
-      "base:": ["Oud-Woody"],
+      "base": ["Oud-Woody"],
       "price": "250,000",
       "giftWrap": false,
       "delivery": true,
@@ -113,7 +113,7 @@
     {
       "id": "13",
       "name": "라몬 모네갈 키스 마이 네임 오드퍼퓸 50ml",
-      "base:": ["Floral", "Fruity"],
+      "base": ["Floral", "Fruity"],
       "price": "250,000",
       "giftWrap": false,
       "delivery": true,
@@ -122,7 +122,7 @@
     {
       "id": "14",
       "name": "라몬 모네갈 임파서블 아이리스 오드퍼퓸 50ml",
-      "base:": ["Floral", "Powdery"],
+      "base": ["Floral", "Powdery"],
       "price": "250,000",
       "giftWrap": false,
       "delivery": true,
@@ -131,7 +131,7 @@
     {
       "id": "15",
       "name": "라몬 모네갈 엔트레 나란호스 오드퍼퓸 50ml",
-      "base:": ["Citrus", "Woody"],
+      "base": ["Citrus", "Woody"],
       "price": "250,000",
       "giftWrap": false,
       "delivery": true,
@@ -140,7 +140,7 @@
     {
       "id": "16",
       "name": "라몬 모네갈 러블리 데이 오드퍼퓸 50ml",
-      "base:": ["Floral", "Fruity"],
+      "base": ["Floral", "Fruity"],
       "price": "250,000",
       "giftWrap": false,
       "delivery": true,
@@ -149,7 +149,7 @@
     {
       "id": "17",
       "name": "라몬 모네갈 몽 패츌리 오드퍼퓸 50ml",
-      "base:": ["Woody", "Patchouli"],
+      "base": ["Woody", "Patchouli"],
       "price": "250,000",
       "giftWrap": false,
       "delivery": true,
@@ -158,7 +158,7 @@
     {
       "id": "18",
       "name": "라몬 모네갈 플라멩코 오드퍼퓸 50ml",
-      "base:": ["Floral", "Fruity"],
+      "base": ["Floral", "Fruity"],
       "price": "312,000",
       "giftWrap": false,
       "delivery": true,
@@ -167,7 +167,7 @@
     {
       "id": "19",
       "name": "라몬 모네갈 몽블룸 오드퍼퓸 50ml",
-      "base:": ["Floral", "Woody"],
+      "base": ["Floral", "Woody"],
       "price": "286,000",
       "giftWrap": false,
       "delivery": true,
@@ -176,7 +176,7 @@
     {
       "id": "20",
       "name": "라몬 모네갈 넥스투미 오드퍼퓸 50ml",
-      "base:": ["Woddy", "Fruity", "Oriental"],
+      "base": ["Woddy", "Fruity", "Oriental"],
       "price": "286,000",
       "giftWrap": false,
       "delivery": true,
@@ -187,7 +187,7 @@
     {
       "id": "21",
       "name": "니샤네 암브라 칼라브리아 엑스뜨레 드 퍼퓸 50ml",
-      "base:": ["Fresh","Green"],
+      "base": ["Fresh","Green"],
       "price": "272,000",
       "giftWrap": true,
       "delivery": true,
@@ -196,7 +196,7 @@
     {
       "id": "22",
       "name": "니샤네 우롱차 엑스뜨레 드 퍼퓸 50ml",
-      "base:": ["Fresh","Citrus"],
+      "base": ["Fresh","Citrus"],
       "price": "272,000",
       "giftWrap": true,
       "delivery": true,
@@ -205,7 +205,7 @@
     {
       "id": "23",
       "name": "니샤네 술탄 베티버 엑스뜨레 드 퍼퓸 50ml",
-      "base:": ["Fresh","Citrus"],
+      "base": ["Fresh","Citrus"],
       "price": "272,000",
       "giftWrap": true,
       "delivery": true,
@@ -214,7 +214,7 @@
     {
       "id": "24",
       "name": "니샤네 스웨이드 엣 사프란 엑스뜨레 드 퍼퓸 50ml",
-      "base:": ["Leathery","Spicy"],
+      "base": ["Leathery","Spicy"],
       "price": "342,000",
       "giftWrap": true,
       "delivery": true,
@@ -223,7 +223,7 @@
     {
       "id": "25",
       "name": "니샤네 패츌리 코자 엑스뜨레 드 퍼퓸 50ml",
-      "base:": ["Earthy","Spicy"],
+      "base": ["Earthy","Spicy"],
       "price": "342,000",
       "giftWrap": true,
       "delivery": true,
@@ -232,7 +232,7 @@
     {
       "id": "26",
       "name": "니샤네 아프리카 올리판트 엑스뜨레 드 퍼퓸 50ml",
-      "base:": ["Animal","Leather"],
+      "base": ["Animal","Leather"],
       "price": "342,000",
       "giftWrap": true,
       "delivery": true,
@@ -241,7 +241,7 @@
     {
       "id": "27",
       "name": "니샤네 콜로니제 엑스뜨레 드 퍼퓸 50ml",
-      "base:": ["Citrus","Floral"],
+      "base": ["Citrus","Floral"],
       "price": "232,000",
       "giftWrap": true,
       "delivery": true,
@@ -250,7 +250,7 @@
     {
       "id": "28",
       "name": "니샤네 카라고즈 엑스뜨레 드 퍼퓸 50ml",
-      "base:": ["Citrus","Floral"],
+      "base": ["Citrus","Floral"],
       "price": "353,000",
       "giftWrap": true,
       "delivery": true,

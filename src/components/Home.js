@@ -46,6 +46,7 @@ export default function Home(){
           className="mySwiper"
         >
           {product.map((item, index)=>{
+            const base = item.base.join(', ');
             return(
               <SwiperSlide key={item.id}>
                 <figure>
@@ -54,7 +55,7 @@ export default function Home(){
                   <figcaption>
                     <dl>
                       <dt><Link to="">{item.name}</Link></dt>
-                      <dd>base</dd>
+                      <dd>{base}</dd>
                       <dd>{item.price}</dd>
                     </dl>
                   </figcaption>
@@ -78,6 +79,7 @@ export default function Home(){
           className="mySwiper"
         >
           {product.map((item)=>{
+            const base = item.base.join(', ')
             return(
               <SwiperSlide key={item.id}>
                 <figure>
@@ -86,7 +88,7 @@ export default function Home(){
                   <figcaption>
                     <dl>
                       <dt><Link to="">{item.name}</Link></dt>
-                      <dd>base</dd>
+                      <dd>{base}</dd>
                       <dd>{item.price}</dd>
                     </dl>
                   </figcaption>
