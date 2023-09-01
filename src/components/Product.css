@@ -253,7 +253,10 @@
 .bottomInfo>img{
   display: block;
   width: 80%;
-  margin: 0 auto 200px;
+  margin: 0 auto;
+}
+.bottomInfo>img:last-of-type{
+  margin-bottom: 200px;
 }
 .bottomInfo>div>p{
   text-align: center;
@@ -279,7 +282,7 @@
   text-align: start;
   background-color: #f9f9f9;
   border: 1px solid #ddd;
-  padding: 20px 10px;
+  padding: 20px 15px;
   font-size: 16px;
 }
 .tableCont>table>tbody td{
@@ -288,10 +291,12 @@
   font-size: 13px;
   border: 1px solid #ddd;
   color: #999;
+  text-align: start;
   line-height: 16px;
+
 }
 .tableCont:nth-of-type(1)>table>tbody td>ul>li:first-child{
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 .tableCont:nth-of-type(2)>table>tbody tr:nth-of-type(5) td>ul>li:nth-of-type(3){
   margin-bottom: 20px;
@@ -303,11 +308,14 @@
 .tableCont:nth-of-type(3)>table>tbody td>ul>li{
   margin-bottom: 20px;
 }
+.tableCont:nth-of-type(3)>table>tbody td>ul>li:last-child{
+  margin-bottom: 0;
+}
 .tableCont:nth-of-type(3)>table>tbody td>ul>li dt{
   font-size: 14px;
   font-weight: bold;
 }
-.tableCont:nth-of-type(3)>table>tbody td>ul>li:nth-of-type(1) dd>span{
+.tableCont:nth-of-type(3)>table>tbody td>ul>li dd>span{
   display: block;
   text-indent: 5px;
 }

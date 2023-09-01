@@ -4,7 +4,12 @@ import { HiStar, HiMinus, HiPlus, HiGift} from 'react-icons/hi';
 
 export function ProductDetail(){
   return(
+    <>
     <img src='./images/keiko/keiko_all.jpeg' alt='' />
+    <img src='./images/keiko/keiko_detail1.jpeg' alt='' />
+    <img src='./images/keiko/keiko_detail2.jpeg' alt='' />
+    <img src='./images/keiko/keiko_detail3.jpeg' alt='' />
+    </>
   )
 }
 export function ProductGuide(){
