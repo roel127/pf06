@@ -6,6 +6,7 @@ import ProductList from "./components/ProductList";
 import Product from "./components/Product";
 import Magazine from "./components/Magazine";
 import Community from "./components/Community";
+import CommunityDetail from "./components/CommunityDetail";
 
 export default function Main(){
   return(
@@ -18,6 +19,7 @@ export default function Main(){
           <Route path="/detail" element={<Product />} />
           <Route path="/magazine" element={<Magazine />} />
           <Route path="/community" element={<Community />} />
+          <Route path="/community1" element={<CommunityDetail />} />
         </Routes>
       </App>
     </BrowserRouter>

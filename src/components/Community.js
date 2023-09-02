@@ -23,7 +23,7 @@ export default function Community(){
           <tbody>
             <tr>
               <td>1</td>
-              <td><Link to>메종 사이브라이트 구매 가이드</Link></td>
+              <td><Link to="/community1">메종 사이브라이트 구매 가이드</Link></td>
               <td>ssensefragrance</td>
               <td>0000-00-00</td>
               <td>0000</td>
