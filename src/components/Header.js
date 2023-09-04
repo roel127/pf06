@@ -29,12 +29,26 @@ export default function Header(){
             </li>
             <li>
               <Link to="/product">Product</Link>
+              <ul>
+                <li><Link to>Keiko</Link></li>
+                <li><Link to>Ramon</Link></li>
+                <li><Link to>Nashane</Link></li>
+              </ul>
             </li>
             <li>
               <Link to="Magazine">Magazine</Link>
+              <ul>
+                <li><Link to>Citrus</Link></li>
+                <li><Link to>Fruity</Link></li>
+              </ul>
             </li>
             <li>
               <Link to="Community">Community</Link>
+              <ul>
+                <li><Link to>공지사항</Link></li>
+                <li><Link to>FAQ</Link></li>
+                <li><Link to>이벤트</Link></li>
+              </ul>
             </li>
           </ul>
         </nav>
