@@ -11,7 +11,8 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 
 
 export default function Home(){
-  const product = data.keiko;
+  const bestItems = data.best;
+  const newItems = data.new;
 
   return(
     <>
@@ -45,7 +46,7 @@ export default function Home(){
           modules={[Pagination]}
           className="mySwiper"
         >
-          {product.map((item, index)=>{
+          {bestItems.map((item, index)=>{
             const base = item.base.join(', ');
             return(
               <SwiperSlide key={item.id}>
@@ -78,7 +79,7 @@ export default function Home(){
           modules={[Pagination]}
           className="mySwiper"
         >
-          {product.map((item)=>{
+          {newItems.map((item)=>{
             const base = item.base.join(', ')
             return(
               <SwiperSlide key={item.id}>
