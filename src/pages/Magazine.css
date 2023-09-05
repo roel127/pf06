@@ -1,0 +1,38 @@
+#mgWrap{
+  width: 1300px;
+  margin: 0 auto;
+}
+.mgInfo{
+  margin-bottom: 100px;
+}
+
+.rcm>div{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+.rcm>p{
+  text-align: center;
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+.rcm>div figure{
+  width: 23%;
+  position: relative;
+}
+.rcm>div figure>figcaption>dl{
+  text-align: start;
+  font-size: 0.8em;
+  font-weight: bolder;
+}
+.rcm>div figure>figcaption>dl>dt{
+  margin-bottom: 10px;
+}
+.rcm>div figure>figcaption>dl>dd{
+  margin-bottom: 10px;
+}
+.rcm>div figure>figcaption>dl>dd:nth-of-type(1){
+  color: #888;
+}
