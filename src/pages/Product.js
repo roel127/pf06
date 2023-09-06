@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './Product.css';
 import { HiStar, HiMinus, HiPlus, HiGift} from 'react-icons/hi';
 import { useParams } from 'react-router-dom';
+import data from '../product.json';
 
 
 export function ProductDetail(){
@@ -145,14 +146,19 @@ export function ProductReview(){
 export default function Product(){
   const [countItem, setCountItem] = useState(1);
   const params = useParams();
-  console.log(params);
+
+  const str = params.slug.split('_');
+  const cont = data[str[0]].stuff.filter(item=>{
+    console.log(item);
+    return item.id.length === 1 ? '0'+item.id == Number(str[1])-1 : item.id == Number(str[1])-1
+  })[0]
 
   return(
     <div id='detail'>
       <section>
         <div className='topView'>
-          <img src='./images/keiko/keiko_wild_berries.jpeg' alt='' />
-          {/* <img src={params.imgUrl} alt='' /> */}
+          {/* <img src='./images/keiko/keiko_wild_berries.jpeg' alt='' /> */}
+          <img src={"."+cont.imgUrl} alt='' />
           <ul>
             <li>
               <ul>
@@ -185,9 +191,9 @@ export default function Product(){
         </div>
         <div className='topInfo'>
           <dl>
-            <dt>케이코 메쉐리 와일드 베리즈 오 드 퍼퓸 100ml</dt>
-            <dd>Floral, Fruity</dd>
-            <dd>220,000원</dd>
+            <dt>{cont.name}</dt>
+            <dd>{cont.base.join(', ')}</dd>
+            <dd>{cont.price}</dd>
             <dd>
               <ul>
                 <li><dfn>브랜드</dfn><span>Keiko</span></li>
@@ -199,19 +205,19 @@ export default function Product(){
           <table>
             <tbody>
               <tr>
-                <td>name</td>
+                <td>{cont.name}</td>
                 <td>
                   <button type='button' onClick={()=>{countItem <= 1 ? alert('1개 이상의 수량을 선택해주세요') : setCountItem(countItem - 1)}}><HiMinus /></button>
                   <span>{countItem}</span>
                   <button type='button' onClick={()=>{countItem >= 9 ? alert('최대 10개까지 구매 가능합니다') :setCountItem(countItem + 1)}}><HiPlus /></button>
                 </td>
-                <td>000,000원</td>
+                <td>{cont.price}원</td>
               </tr>
             </tbody>
           </table>
           <p>
             <span>총 상품금액</span>
-            <span>원 <b>&#40;{countItem}개&#41;</b></span>
+            <span>{Number(cont.price.replace(',','')) * countItem}원 <b>&#40;{countItem}개&#41;</b></span>
           </p>
           <p><button><HiGift />선물하기</button></p>
           <p>

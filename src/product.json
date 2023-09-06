@@ -9,7 +9,7 @@
         "giftWrap": true,
         "delivery": true,
         "imgUrl": "./images/keiko/keiko_wild_berries.jpeg",
-        "slug": "Keiko01",
+        "slug": "keiko_01",
         "topics": [
           {
             "topic": {
@@ -29,7 +29,7 @@
         "giftWrap": true,
         "delivery": true,
         "imgUrl": "./images/keiko/keiko_sedona_blue.jpeg",
-        "slug": "Keiko02",
+        "slug": "keiko_02",
         "topics": [
           {
             "topic": {
@@ -49,7 +49,7 @@
         "giftWrap": true,
         "delivery": true,
         "imgUrl": "./images/keiko/keiko_peaude_peche.jpeg",
-        "slug": "Keiko03",
+        "slug": "keiko_03",
         "topics": [
           {
             "topic": {
@@ -69,7 +69,7 @@
         "giftWrap": true,
         "delivery": true,
         "imgUrl": "./images/keiko/keiko_mogador.jpeg",
-        "slug": "Keiko04",
+        "slug": "keiko_04",
         "topics": [
           {
             "topic": {
@@ -89,7 +89,7 @@
         "giftWrap": true,
         "delivery": true,
         "imgUrl": "./images/keiko/keiko_isles_lointaines.jpeg",
-        "slug": "Keiko05",
+        "slug": "keiko_05",
         "topics": [
           {
             "topic": {
@@ -109,7 +109,7 @@
         "giftWrap": true,
         "delivery": true,
         "imgUrl": "./images/keiko/keiko_hanae.jpeg",
-        "slug": "Keiko06",
+        "slug": "keiko_06",
         "topics": [
           {
             "topic": {
@@ -129,7 +129,7 @@
         "giftWrap": true,
         "delivery": true,
         "imgUrl": "./images/keiko/keiko_clear_obscur.jpeg",
-        "slug": "Keiko07",
+        "slug": "keiko_07",
         "topics": [
           {
             "topic": {
@@ -149,7 +149,7 @@
         "giftWrap": true,
         "delivery": true,
         "imgUrl": "./images/keiko/keiko_loukhoum.jpeg",
-        "slug": "Keiko08",
+        "slug": "keiko_08",
         "topics": [
           {
             "topic": {
@@ -169,7 +169,7 @@
         "giftWrap": true,
         "delivery": true,
         "imgUrl": "./images/keiko/keiko_balde_roses.jpeg",
-        "slug": "Keiko09",
+        "slug": "keiko_09",
         "topics": [
           {
             "topic": {
@@ -197,7 +197,7 @@
         "giftWrap": false,
         "delivery": true,
         "imgUrl": "./images/ramon/ramon_cherry.jpeg",
-        "slug": "Ramon01",
+        "slug": "ramon_11",
         "topics": [
           {
             "topic": {
@@ -217,7 +217,7 @@
         "giftWrap": false,
         "delivery": true,
         "imgUrl": "./images/ramon/ramon_cotton.jpeg",
-        "slug": "Ramon02",
+        "slug": "ramon_12",
         "topics": [
           {
             "topic": {
@@ -237,7 +237,7 @@
         "giftWrap": false,
         "delivery": true,
         "imgUrl": "./images/ramon/ramon_agar.jpeg",
-        "slug": "Ramon03",
+        "slug": "ramon_13",
         "topics": [
           {
             "topic": {
@@ -257,7 +257,7 @@
         "giftWrap": false,
         "delivery": true,
         "imgUrl": "./images/ramon/ramon_kiss_my_name.jpeg",
-        "slug": "Ramon04",
+        "slug": "ramon_14",
         "topics": [
           {
             "topic": {
@@ -277,7 +277,7 @@
         "giftWrap": false,
         "delivery": true,
         "imgUrl": "./images/ramon/ramon_impossible_iris.jpeg",
-        "slug": "Ramon05",
+        "slug": "ramon_15",
         "topics": [
           {
             "topic": {
@@ -297,7 +297,7 @@
         "giftWrap": false,
         "delivery": true,
         "imgUrl": "./images/ramon/ramon_entre_naranjos.jpeg",
-        "slug": "Ramon06",
+        "slug": "ramon_16",
         "topics": [
           {
             "topic": {
@@ -317,7 +317,7 @@
         "giftWrap": false,
         "delivery": true,
         "imgUrl": "./images/ramon/ramon_lovely_day.jpeg",
-        "slug": "Ramon07",
+        "slug": "ramon_17",
         "topics": [
           {
             "topic": {
@@ -337,7 +337,7 @@
         "giftWrap": false,
         "delivery": true,
         "imgUrl": "./images/ramon/ramon_mon_patchouly.jpeg",
-        "slug": "Ramon08",
+        "slug": "ramon_18",
         "topics": [
           {
             "topic": {
@@ -357,7 +357,7 @@
         "giftWrap": false,
         "delivery": true,
         "imgUrl": "./images/ramon/ramon_flamenco.jpeg",
-        "slug": "Ramon09",
+        "slug": "ramon_19",
         "topics": [
           {
             "topic": {
@@ -377,7 +377,7 @@
         "giftWrap": false,
         "delivery": true,
         "imgUrl": "./images/ramon/ramon_monbloom.jpeg",
-        "slug": "Ramon10",
+        "slug": "ramon_20",
         "topics": [
           {
             "topic": {
@@ -391,7 +391,7 @@
       }
     ],
     "explain":[
-      "라몬 모네갈(Ramon Monegal)은 100년 이상 향수 세계의 역사적인 랜드마크이자 기념할 만한 역할 모델인 향수를 상상하고 창조해 온 Myrurgia의 창립자인 Monegal 가족의 4세대입니다.",
+      "라몬 모네갈(ramon_ Monegal)은 100년 이상 향수 세계의 역사적인 랜드마크이자 기념할 만한 역할 모델인 향수를 상상하고 창조해 온 Myrurgia의 창립자인 Monegal 가족의 4세대입니다.",
       "자연 외에 나의 주요 영감의 원천은 문학입니다. 나는 단어를 음표로, 문구를 화음으로, 이야기를 작곡으로, 잉크를 상상의 향수로 바꿀 수 있습니다. 향수를 만드는 것 외에도 진정한 코는 그 가치에 걸맞은 최고의 수준에 도달하는 재료를 선택하도록 특별히 훈련되었습니다."
     ]
   },
@@ -405,7 +405,7 @@
         "giftWrap": true,
         "delivery": true,
         "imgUrl": "./images/nishane/nishane_ambra_calabrea.jpeg",
-        "slug": "nishane01",
+        "slug": "nishane_21",
         "topics": [
           {
             "topic": {
@@ -425,7 +425,7 @@
         "giftWrap": true,
         "delivery": true,
         "imgUrl": "./images/nishane/nishane_wulongcha.jpeg",
-        "slug": "nishane02",
+        "slug": "nishane_22",
         "topics": [
           {
             "topic": {
@@ -445,7 +445,7 @@
         "giftWrap": true,
         "delivery": true,
         "imgUrl": "./images/nishane/nishane_sultan_vetiver.jpeg",
-        "slug": "nishane03",
+        "slug": "nishane_23",
         "topics": [
           {
             "topic": {
@@ -465,7 +465,7 @@
         "giftWrap": true,
         "delivery": true,
         "imgUrl": "./images/nishane/nishane_suede_et_safran.jpeg",
-        "slug": "nishane04",
+        "slug": "nishane_24",
         "topics": [
           {
             "topic": {
@@ -485,7 +485,7 @@
         "giftWrap": true,
         "delivery": true,
         "imgUrl": "./images/nishane/nishane_pachuli_kozha.jpeg",
-        "slug": "nishane05",
+        "slug": "nishane_25",
         "topics": [
           {
             "topic": {
@@ -505,7 +505,7 @@
         "giftWrap": true,
         "delivery": true,
         "imgUrl": "./images/nishane/nishane_afrika_olifant.jpeg",
-        "slug": "nishane06",
+        "slug": "nishane_26",
         "topics": [
           {
             "topic": {
@@ -525,7 +525,7 @@
         "giftWrap": true,
         "delivery": true,
         "imgUrl": "./images/nishane/nishane_colognise.jpeg",
-        "slug": "nishane07",
+        "slug": "nishane_27",
         "topics": [
           {
             "topic": {
@@ -545,7 +545,7 @@
         "giftWrap": true,
         "delivery": true,
         "imgUrl": "./images/nishane/nishane_karagoz.jpeg",
-        "slug": "nishane08",
+        "slug": "nishane_28",
         "topics": [
           {
             "topic": {
@@ -566,13 +566,14 @@
   "best":[
     {
       "id": "5",
+      "idCode": "5",
       "name": "케이코 메쉐리 하나에 오 드 퍼퓸 100ml",
       "base": ["Floral", "Fresh"],
       "price": "220,000",
       "giftWrap": true,
       "delivery": true,
       "imgUrl": "./images/keiko/keiko_hanae.jpeg",
-      "slug": "keiko06",
+      "slug": "keiko_06",
       "topics": [
         {
           "topic": {
@@ -586,13 +587,14 @@
     },
     {
       "id": "7",
+      "idCode": "7",
       "name": "케이코 메쉐리 로쿰 퍼퓸 뒤 수와르 100ml",
       "base": ["Sweet", "Gourmand"],
       "price": "330,000",
       "giftWrap": true,
       "delivery": true,
       "imgUrl": "./images/keiko/keiko_loukhoum.jpeg",
-      "slug": "keiko08",
+      "slug": "keiko_08",
       "topics": [
         {
           "topic": {
@@ -606,13 +608,14 @@
     },
     {
       "id": "13",
+      "idCode": "13",
       "name": "라몬 모네갈 키스 마이 네임 오드퍼퓸 50ml",
       "base": ["Floral", "Fruity"],
       "price": "250,000",
       "giftWrap": false,
       "delivery": true,
       "imgUrl": "./images/ramon/ramon_kiss_my_name.jpeg",
-      "slug": "ramon04",
+      "slug": "ramon_14",
       "topics": [
         {
           "topic": {
@@ -626,13 +629,14 @@
     },
     {
       "id": "24",
+      "idCode": "24",
       "name": "니샤네 패츌리 코자 엑스뜨레 드 퍼퓸 50ml",
       "base": ["Earthy","Spicy"],
       "price": "342,000",
       "giftWrap": true,
       "delivery": true,
       "imgUrl": "./images/nishane/nishane_pachuli_kozha.jpeg",
-      "slug": "nishane05",
+      "slug": "nishane_25",
       "topics": [
         {
           "topic": {
@@ -646,13 +650,14 @@
     },
     {
       "id": "15",
+      "idCode": "15",
       "name": "라몬 모네갈 엔트레 나란호스 오드퍼퓸 50ml",
       "base": ["Citrus", "Woody"],
       "price": "250,000",
       "giftWrap": false,
       "delivery": true,
       "imgUrl": "./images/ramon/ramon_entre_naranjos.jpeg",
-      "slug": "ramon06",
+      "slug": "ramon_16",
       "topics": [
         {
           "topic": {
@@ -666,13 +671,14 @@
     },
     {
       "id": "8",
+      "idCode": "8",
       "name": "케이코 메쉐리 발 드 로지즈 오 드 퍼퓸 100ml",
       "base": ["Floral", "Powdery"],
       "price": "260,000",
       "giftWrap": true,
       "delivery": true,
       "imgUrl": "./images/keiko/keiko_balde_roses.jpeg",
-      "slug": "keiko09",
+      "slug": "keiko_19",
       "topics": [
         {
           "topic": {
@@ -686,13 +692,14 @@
     },
     {
       "id": "21",
+      "idCode": "21",
       "name": "니샤네 우롱차 엑스뜨레 드 퍼퓸 50ml",
       "base": ["Fresh","Citrus"],
       "price": "272,000",
       "giftWrap": true,
       "delivery": true,
       "imgUrl": "./images/nishane/nishane_wulongcha.jpeg",
-      "slug": "nishane02",
+      "slug": "nishane_22",
       "topics": [
         {
           "topic": {
@@ -708,13 +715,14 @@
   "new":[
     {
       "id": "21",
+      "idCode": "21",
       "name": "니샤네 우롱차 엑스뜨레 드 퍼퓸 50ml",
       "base": ["Fresh","Citrus"],
       "price": "272,000",
       "giftWrap": true,
       "delivery": true,
       "imgUrl": "./images/nishane/nishane_wulongcha.jpeg",
-      "slug": "nishane02",
+      "slug": "nishane_22",
       "topics": [
         {
           "topic": {
@@ -728,13 +736,14 @@
     },
     {
       "id": "22",
+      "idCode": "22",
       "name": "니샤네 술탄 베티버 엑스뜨레 드 퍼퓸 50ml",
       "base": ["Fresh","Citrus"],
       "price": "272,000",
       "giftWrap": true,
       "delivery": true,
       "imgUrl": "./images/nishane/nishane_sultan_vetiver.jpeg",
-      "slug": "nishane03",
+      "slug": "nishane_23",
       "topics": [
         {
           "topic": {
@@ -748,13 +757,14 @@
     },
     {
       "id": "12",
+      "idCode": "12",
       "name": "라몬 모네갈 아갈 머스크 오드퍼퓸 50ml",
       "base": ["Oud-Woody"],
       "price": "250,000",
       "giftWrap": false,
       "delivery": true,
       "imgUrl": "./images/ramon/ramon_agar.jpeg",
-      "slug": "Ramon03",
+      "slug": "ramon_13",
       "topics": [
         {
           "topic": {
@@ -768,13 +778,14 @@
     },
     {
       "id": "16",
+      "idCode": "16",
       "name": "라몬 모네갈 러블리 데이 오드퍼퓸 50ml",
       "base": ["Floral", "Fruity"],
       "price": "250,000",
       "giftWrap": false,
       "delivery": true,
       "imgUrl": "./images/ramon/ramon_lovely_day.jpeg",
-      "slug": "Ramon07",
+      "slug": "ramon_17",
       "topics": [
         {
           "topic": {
@@ -788,13 +799,14 @@
     },
     {
       "id": "6",
+      "idCode": "6",
       "name": "케이코 메쉐리 클레어 옵스큐어 오 드 퍼퓸 100ml",
       "base": ["Floral"],
       "price": "220,000",
       "giftWrap": true,
       "delivery": true,
       "imgUrl": "./images/keiko/keiko_clear_obscur.jpeg",
-      "slug": "Keiko07",
+      "slug": "keiko_07",
       "topics": [
         {
           "topic": {
@@ -808,13 +820,14 @@
     },
     {
       "id": "2",
+      "idCode": "2",
       "name": "케이코 메쉐리 포 드 페쉐 오 드 퍼퓸 100ml",
       "base": ["Fruity", "Powdery"],
       "price": "220,000",
       "giftWrap": true,
       "delivery": true,
       "imgUrl": "./images/keiko/keiko_peaude_peche.jpeg",
-      "slug": "Keiko03",
+      "slug": "keiko_03",
       "topics": [
         {
           "topic": {
