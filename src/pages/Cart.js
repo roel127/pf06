@@ -30,22 +30,26 @@ export function CartList(){
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>
-              <input type='checkbox'></input>
-            </td>
-            <td><img src='./images/keiko/keiko_hanae.jpeg' alt='' /></td>
-            <td>name</td>
-            <td>price</td>
-            <td>count</td>
-            <td>0,000,000원</td>
-            <td>
-              <ul>
-                <li><button>주문하기</button></li>
-                <li><button>삭제</button></li>
-              </ul>
-            </td>
-          </tr>
+          {Array.map(item=>{
+            return(
+              <tr>
+                <td>
+                  <input type='checkbox'></input>
+                </td>
+                <td><img src='./images/keiko/keiko_hanae.jpeg' alt='' /></td>
+                <td>{item.name}</td>
+                <td>{item.price}</td>
+                <td>count</td>
+                <td>0,000,000원</td>
+                <td>
+                  <ul>
+                    <li><button>주문하기</button></li>
+                    <li><button>삭제</button></li>
+                  </ul>
+                </td>
+              </tr>
+            )
+          })}
         </tbody>
       </table>
       <p>

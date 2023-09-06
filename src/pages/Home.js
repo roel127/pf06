@@ -50,9 +50,9 @@ export default function Home(){
           {bestItems.map((item, index)=>{
             const base = item.base.join(', ');
             return(
-              <SwiperSlide key={item.id}>
+              <SwiperSlide key={item.slug}>
                 <figure>
-                  <Link to=""><img src={item.imgUrl} alt={item.name}/></Link>
+                  <Link to={`/product/${item.slug}`}><img src={item.imgUrl} alt={item.name}/></Link>
                   <span>{index+1}</span>
                   <figcaption>
                     <dl>

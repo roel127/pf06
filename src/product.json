@@ -572,7 +572,7 @@
       "giftWrap": true,
       "delivery": true,
       "imgUrl": "./images/keiko/keiko_hanae.jpeg",
-      "slug": "Keiko06",
+      "slug": "keiko06",
       "topics": [
         {
           "topic": {
@@ -592,7 +592,7 @@
       "giftWrap": true,
       "delivery": true,
       "imgUrl": "./images/keiko/keiko_loukhoum.jpeg",
-      "slug": "Keiko08",
+      "slug": "keiko08",
       "topics": [
         {
           "topic": {
@@ -612,7 +612,7 @@
       "giftWrap": false,
       "delivery": true,
       "imgUrl": "./images/ramon/ramon_kiss_my_name.jpeg",
-      "slug": "Ramon04",
+      "slug": "ramon04",
       "topics": [
         {
           "topic": {
@@ -652,7 +652,7 @@
       "giftWrap": false,
       "delivery": true,
       "imgUrl": "./images/ramon/ramon_entre_naranjos.jpeg",
-      "slug": "Ramon06",
+      "slug": "ramon06",
       "topics": [
         {
           "topic": {
@@ -672,7 +672,7 @@
       "giftWrap": true,
       "delivery": true,
       "imgUrl": "./images/keiko/keiko_balde_roses.jpeg",
-      "slug": "Keiko09",
+      "slug": "keiko09",
       "topics": [
         {
           "topic": {

@@ -144,7 +144,7 @@ export function ProductReview(){
 
 export default function Product(){
   const [countItem, setCountItem] = useState(1);
-  const {params} = useParams();
+  const params = useParams();
   console.log(params);
 
   return(
@@ -152,6 +152,7 @@ export default function Product(){
       <section>
         <div className='topView'>
           <img src='./images/keiko/keiko_wild_berries.jpeg' alt='' />
+          {/* <img src={params.imgUrl} alt='' /> */}
           <ul>
             <li>
               <ul>

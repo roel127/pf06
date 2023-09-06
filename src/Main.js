@@ -1,12 +1,12 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import App from './components/App';
-import Home from "./components/Home";
-import Cart from "./components/Cart";
-import ProductList from "./components/ProductList";
-import Product from "./components/Product";
-import Magazine from "./components/Magazine";
-import Community from "./components/Community";
-import CommunityDetail from "./components/CommunityDetail";
+import Home from "./pages/Home";
+import Cart from "./pages/Cart";
+import ProductList from "./pages/ProductList";
+import Product from "./pages/Product";
+import Magazine from "./pages/Magazine";
+import Community from "./pages/Community";
+import CommunityDetail from "./pages/CommunityDetail";
 
 export default function Main(){
   return(
@@ -15,11 +15,14 @@ export default function Main(){
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/product" element={<ProductList />} />
-          <Route path="/detail" element={<Product />} />
+          <Route path="/product">
+            <Route index element={<ProductList />} />
+            <Route path=":courseSlug" element={<Product />} />
+          </Route>
           <Route path="/magazine" element={<Magazine />} />
           <Route path="/community" element={<Community />} />
           <Route path="/community1" element={<CommunityDetail />} />
+
         </Routes>
       </App>
     </BrowserRouter>
