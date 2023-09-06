@@ -15,10 +15,10 @@ export function BrandForm( {brand, brandEx} ){
       {brand.map(item=>{
         return(
           <figure key={item.id}>
-            <Link to=""><img src={item.imgUrl} alt="" /></Link>
+            <Link to={`/product/${item.slug}`}><img src={item.imgUrl} alt="" /></Link>
             <figcaption>
               <dl>
-                <dt><Link to="">{item.name}</Link></dt>
+                <dt><Link to={`/product/${item.slug}`}>{item.name}</Link></dt>
                 <dd>{item.base}</dd>
                 <dd>{item.price}</dd>
                 <dd>

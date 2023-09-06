@@ -56,7 +56,7 @@ export default function Home(){
                   <span>{index+1}</span>
                   <figcaption>
                     <dl>
-                      <dt><Link to="">{item.name}</Link></dt>
+                      <dt><Link to={`/product/${item.slug}`}>{item.name}</Link></dt>
                       <dd>{base}</dd>
                       <dd>{item.price}</dd>
                     </dl>
@@ -85,11 +85,11 @@ export default function Home(){
             return(
               <SwiperSlide key={item.id}>
                 <figure>
-                  <Link to=""><img src={item.imgUrl} alt={item.name}/></Link>
+                  <Link to={`/product/${item.slug}`}><img src={item.imgUrl} alt={item.name}/></Link>
                   <span>New</span>
                   <figcaption>
                     <dl>
-                      <dt><Link to="">{item.name}</Link></dt>
+                      <dt><Link to={`/product/${item.slug}`}>{item.name}</Link></dt>
                       <dd>{base}</dd>
                       <dd>{item.price}</dd>
                     </dl>
