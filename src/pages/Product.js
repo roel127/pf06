@@ -3,15 +3,16 @@ import './Product.css';
 import { HiStar, HiMinus, HiPlus, HiGift} from 'react-icons/hi';
 import { useParams } from 'react-router-dom';
 import data from '../product.json';
+import $ from 'jquery';
 
 
 export function ProductDetail(){
   return(
     <>
-    <img src='./images/keiko/keiko_all.jpeg' alt='' />
-    <img src='./images/keiko/keiko_detail1.jpeg' alt='' />
-    <img src='./images/keiko/keiko_detail2.jpeg' alt='' />
-    <img src='./images/keiko/keiko_detail3.jpeg' alt='' />
+    <img src='../images/keiko/keiko_all.jpeg' alt='' />
+    <img src='../images/keiko/keiko_detail1.jpeg' alt='' />
+    <img src='../images/keiko/keiko_detail2.jpeg' alt='' />
+    <img src='../images/keiko/keiko_detail3.jpeg' alt='' />
     </>
   )
 }
@@ -137,9 +138,25 @@ export function ProductGuide(){
     </div>
   )
 }
-export function ProductReview(){
+export function ProductReview( {cont} ){
   return(
-    <></>
+    <div className='review'>
+      <p>상품 리뷰</p>
+      <div>
+        {cont.topics.map(item=>{
+          return(
+            <ul>
+              <li>
+                {item.topic.name}
+              </li>
+              <li>
+                {item.topic.cont}
+              </li>
+            </ul>
+          )
+        })}
+      </div>
+    </div>
   )
 }
 
@@ -149,22 +166,22 @@ export default function Product(){
 
   const str = params.slug.split('_');
   const cont = data[str[0]].stuff.filter(item=>{
-    console.log(item);
     return item.id.length === 1 ? '0'+item.id == Number(str[1])-1 : item.id == Number(str[1])-1
-  })[0]
+  })[0];
+
+  const totalPrice = Number(cont.price.replace(',','')) * countItem;
 
   return(
     <div id='detail'>
       <section>
         <div className='topView'>
-          {/* <img src='./images/keiko/keiko_wild_berries.jpeg' alt='' /> */}
           <img src={"."+cont.imgUrl} alt='' />
           <ul>
             <li>
               <ul>
                 <li>상품만족도</li>
                 <li><span><HiStar /></span>5.0 /5</li>
-                <li><span>5</span> 개의 리뷰가 있습니다.</li>
+                <li><span>{cont.topics.length}</span> 개의 리뷰가 있습니다.</li>
                 <li><button type='button'>리뷰 작성하기</button></li>
               </ul>
             </li>
@@ -207,9 +224,9 @@ export default function Product(){
               <tr>
                 <td>{cont.name}</td>
                 <td>
-                  <button type='button' onClick={()=>{countItem <= 1 ? alert('1개 이상의 수량을 선택해주세요') : setCountItem(countItem - 1)}}><HiMinus /></button>
+                  <button type='button' onClick={()=>{countItem <= 1 ? setCountItem(1) : setCountItem(countItem - 1)}}><HiMinus /></button>
                   <span>{countItem}</span>
-                  <button type='button' onClick={()=>{countItem >= 9 ? alert('최대 10개까지 구매 가능합니다') :setCountItem(countItem + 1)}}><HiPlus /></button>
+                  <button type='button' onClick={()=>{countItem >= 9 ? setCountItem(9) :setCountItem(countItem + 1)}}><HiPlus /></button>
                 </td>
                 <td>{cont.price}원</td>
               </tr>
@@ -217,7 +234,7 @@ export default function Product(){
           </table>
           <p>
             <span>총 상품금액</span>
-            <span>{Number(cont.price.replace(',','')) * countItem}원 <b>&#40;{countItem}개&#41;</b></span>
+            <span>{totalPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}원 <b>&#40;{countItem}개&#41;</b></span>
           </p>
           <p><button><HiGift />선물하기</button></p>
           <p>
@@ -235,6 +252,7 @@ export default function Product(){
         <div className='bottomInfo'>
           <ProductDetail />
           <ProductGuide />
+          <ProductReview cont={cont} />
         </div>
       </section>
     </div>
