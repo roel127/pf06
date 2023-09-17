@@ -184,6 +184,9 @@
   border: 1px solid #e8e8e8;
   font-size: 15px;
 }
+.topInfo>p button{
+  cursor: pointer;
+}
 .topInfo>p:nth-of-type(1){
   display: flex;
   justify-content: space-between;
