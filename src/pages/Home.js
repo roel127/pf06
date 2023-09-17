@@ -14,7 +14,6 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 export default function Home(){
   const bestItems = data.best;
   const newItems = data.new;
-
   return(
     <>
     <div className='banner'>
@@ -42,7 +41,7 @@ export default function Home(){
       </div>
       <div className='homeList'>
         <Swiper
-          slidesPerView={3}
+          slidesPerView={3.5}
           spaceBetween={30}
           modules={[Pagination]}
           className="mySwiper"
@@ -75,7 +74,7 @@ export default function Home(){
       </div>
       <div className='homeList'>
         <Swiper
-          slidesPerView={4}
+          slidesPerView={3.5}
           spaceBetween={30}
           modules={[Pagination]}
           className="mySwiper"
