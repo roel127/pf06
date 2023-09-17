@@ -7,22 +7,24 @@ import Product from "./pages/Product";
 import Magazine from "./pages/Magazine";
 import Community from "./pages/Community";
 import CommunityDetail from "./pages/CommunityDetail";
+import LogIn from "./pages/LogIn";
 
 export default function Main(){
+  const testResult = [1, 2, 3, 4, 5];
   return(
     <BrowserRouter>
       <App>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home foo={testResult}/>} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/product">
             <Route index element={<ProductList />} />
-            <Route path=":courseSlug" element={<Product />} />
+            <Route path=":slug" element={<Product />} />
           </Route>
           <Route path="/magazine" element={<Magazine />} />
           <Route path="/community" element={<Community />} />
           <Route path="/community1" element={<CommunityDetail />} />
-
+          <Route path="/login" element={<LogIn />} />
         </Routes>
       </App>
     </BrowserRouter>

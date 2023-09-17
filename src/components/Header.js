@@ -10,7 +10,7 @@ export default function Header(){
         </h1>
         <ul>
           <li>
-            <Link to="*">로그인</Link>
+            <Link to="/login">로그인</Link>
           </li>
           <li>
             <Link to="*">마이페이지</Link>

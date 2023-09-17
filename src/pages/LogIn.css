@@ -1,0 +1,53 @@
+#logIn{
+  width: 1300px;
+  margin: 0 auto;
+}
+.logBox{
+  width: 50%;
+  /* height: calc(100vh - 210px); */
+  margin: 0 auto;
+  border: 1px solid #bbb;
+  text-align: center;
+}
+.logBox>form{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+}
+.logBox>form input{
+  margin-bottom: 20px;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  padding: 20px 10px;
+  font-size: 20px;
+  box-sizing: border-box;
+}
+.logBox>form input:nth-of-type(2){
+  margin-bottom: 30px;
+}
+.logBox>form input:nth-of-type(3){
+  border: none;
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+.logBox>form>div{
+  border-top: 1px solid #bbb;
+  padding: 20px 0 110px;
+}
+.logBox>form>div>p{
+  display: flex;
+  justify-content: space-between;
+}
+.logBox>form>div>p>span{
+  display: flex;
+}
+.logBox>form>div>p a{
+  padding: 0 10px;
+  font-size: 15px;
+  color: #333;
+}
+.logBox>form>div>p>span>a:nth-of-type(1){
+  border-right: 1px solid #333;
+}
