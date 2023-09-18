@@ -1,6 +1,5 @@
 import './ProductList.css';
 import $ from 'jquery';
-import { Link } from 'react-router-dom';
 import data from '../product.json';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';

@@ -4,7 +4,8 @@ import { HiStar, HiMinus, HiPlus, HiGift} from 'react-icons/hi';
 import { useParams } from 'react-router-dom';
 import data from '../product.json';
 import $ from 'jquery';
-
+import { addToCart } from '../redux/User';
+import { useDispatch, useSelector } from 'react-redux';
 
 export function ProductDetail(){
   return(
@@ -143,9 +144,9 @@ export function ProductReview( {cont} ){
     <div className='review'>
       <p>상품 리뷰</p>
       <div>
-        {cont.topics.map(item=>{
+        {cont.topics.map((item, index)=>{
           return(
-            <ul>
+            <ul key={index}>
               <li>
                 {item.topic.name}
               </li>
@@ -163,6 +164,8 @@ export function ProductReview( {cont} ){
 export default function Product(){
   const [countItem, setCountItem] = useState(1);
   const params = useParams();
+  const { cartProductIds } = useSelector(state=>state.cart);
+  const dispatch = useDispatch();
 
   const str = params.slug.split('_');
   const cont = data[str[0]].stuff.filter(item=>{
@@ -170,12 +173,13 @@ export default function Product(){
   })[0];
 
   const totalPrice = Number(cont.price.replace(',','')) * countItem;
-
+  console.log(cartProductIds);
+  // console.log(cont)
   return(
     <div id='detail'>
       <section>
         <div className='topView'>
-          <img src={"."+cont.imgUrl} alt='' />
+          <img src={"."+cont.imgUrl} alt={cont.name} />
           <ul>
             <li>
               <ul>
@@ -215,7 +219,7 @@ export default function Product(){
               <ul>
                 <li><dfn>브랜드</dfn><span>Keiko</span></li>
                 <li><dfn>할인</dfn><span>적용안됨</span></li>
-                <li><dfn>배송비</dfn><span>무료</span></li>
+                <li><dfn>배송비</dfn>{cont.delivery === true && (<span>무료</span>) || (<span>2,500원</span>)}</li>
               </ul>
             </dd>
           </dl>
@@ -236,10 +240,10 @@ export default function Product(){
             <span>총 상품금액</span>
             <span>{totalPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}원 <b>&#40;{countItem}개&#41;</b></span>
           </p>
-          <p><button><HiGift />선물하기</button></p>
+          <p><button type='button'><HiGift />선물하기</button></p>
           <p>
-            <button>바로 구매</button>
-            <button>장바구니</button>
+            <button type='button'>바로 구매</button>
+            <button type='button' onClick={ ()=> cartProductIds.filter(item=>item.id == cont.id).length >= 1 ? alert('이미 장바구니에 있습니다.') : dispatch(addToCart({id:cont.id, brand:str[0], count:countItem})) }>장바구니</button>
           </p>
         </div>
       </section>
