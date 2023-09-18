@@ -14,9 +14,15 @@ const user = createSlice({
         times: new Date().getTime()
       }
       state.cartProductIds = [...state.cartProductIds, add];
+    },
+    removeToCart(state, action){
+      // state.cartProductIds = state.cartProductIds.filter(item=>(item.id !== action.payload));
+    },
+    allClear(state){
+      state.cartProductIds = [];
     }
   }
 })
 
-export const {addToCart} = user.actions;
+export const {addToCart, removeToCart, allClear} = user.actions;
 export default user;
