@@ -1,4 +1,8 @@
 import './Cart.css';
+import { useDispatch, useSelector } from 'react-redux';
+import data from '../product.json';
+import { useEffect } from 'react';
+import { removeToCart, allClear } from '../redux/User';
 
 export function CartEmpty(){
   return(
@@ -8,12 +12,13 @@ export function CartEmpty(){
   )
 }
 
-export function CartList(){
+export function CartList( {cartList} ){
+  const dispatch = useDispatch();
   return(
     <div className="cartList">
       <p>
         <button type='button'>선택삭제</button>
-        <button type='button'>전체삭제</button>
+        <button onClick={()=>dispatch(allClear())} type='button'>전체삭제</button>
       </p>
       <table>
         <thead>
@@ -30,21 +35,22 @@ export function CartList(){
           </tr>
         </thead>
         <tbody>
-          {Array.map(item=>{
+          {cartList.map(item=>{
+              const totalPrice = Number(item.price.replace(',','')) * item.count;
             return(
-              <tr>
+              <tr key={item.id}>
                 <td>
                   <input type='checkbox'></input>
                 </td>
-                <td><img src='./images/keiko/keiko_hanae.jpeg' alt='' /></td>
+                <td><img src={item.imgUrl} alt={item.name} /></td>
                 <td>{item.name}</td>
-                <td>{item.price}</td>
-                <td>count</td>
-                <td>0,000,000원</td>
+                <td>{item.price}원</td>
+                <td>{item.count}</td>
+                <td>{totalPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}원</td>
                 <td>
                   <ul>
-                    <li><button>주문하기</button></li>
-                    <li><button>삭제</button></li>
+                    <li><button type='button'>주문하기</button></li>
+                    <li><button /* onClick={()=>dispatch(removeToCart(item.id))} */ type='button'>삭제</button></li>
                   </ul>
                 </td>
               </tr>
@@ -65,10 +71,33 @@ export function CartList(){
 }
 
 export default function Cart(){
+  const { cartProductIds } = useSelector(state=>state.cart);
+  const dispatch = useDispatch();
+  let cartList = [];
+
+  cartProductIds.forEach(item=>{
+    const qoo = item.brand;
+    data[qoo].stuff.forEach(val=>{
+      if(item.id === val.id){
+        val.count = item.count;
+        val.times = item.times;
+        cartList.unshift(val);
+      }
+    })
+    cartList.sort((a,b)=>a.times > b.times ? -1 : a.times < b.times ? 1 : 0);
+  })
+
   return(
     <div id='cartWrap'>
-      <CartList />
-      {/* <CartEmpty /> */}
+      {
+        cartProductIds.length > 1 &&
+        <CartList cartList={cartList} />
+      }
+      {
+        cartProductIds.length < 1 &&
+        (<CartEmpty />)
+      }
+      
     </div>
   )
 }

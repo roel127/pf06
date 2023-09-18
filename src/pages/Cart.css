@@ -2,7 +2,9 @@
   width: 1300px;
   margin: 0 auto;
 }
-
+.cartList button{
+  cursor: pointer;
+}
 .cartList>p:nth-of-type(1){
   margin-bottom: 10px;
 }
