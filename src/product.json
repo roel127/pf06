@@ -7,8 +7,9 @@
         "base": ["Floral", "Fruity"],
         "price": "220,000",
         "giftWrap": true,
-        "delivery": true,
+        "delivery": false,
         "imgUrl": "./images/keiko/keiko_wild_berries.jpeg",
+        "detailImg": ["../images/keiko/keiko_detail/keiko_01_01.jpeg", "../images/keiko/keiko_detail/keiko_01_02.jpeg", "../images/keiko/keiko_detail/keiko_01_03.jpeg"],
         "slug": "keiko_01",
         "topics": [
           {
@@ -17,6 +18,14 @@
               "name": "성동일",
               "slug": "keiko0101",
               "cont": "리뷰내용입니다."
+            }
+          },
+          {
+            "topic": {
+              "id": "0101",
+              "name": "성동일",
+              "slug": "keiko0101",
+              "cont": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
             }
           }
         ]
@@ -29,6 +38,7 @@
         "giftWrap": true,
         "delivery": true,
         "imgUrl": "./images/keiko/keiko_sedona_blue.jpeg",
+        "detailImg": ["../images/keiko/keiko_detail/keiko_02_01.jpeg", "../images/keiko/keiko_detail/keiko_02_02.jpeg", "../images/keiko/keiko_detail/keiko_02_03.jpeg"],
         "slug": "keiko_02",
         "topics": [
           {
@@ -49,6 +59,7 @@
         "giftWrap": true,
         "delivery": true,
         "imgUrl": "./images/keiko/keiko_peaude_peche.jpeg",
+        "detailImg": ["../images/keiko/keiko_detail/keiko_03_01.jpeg", "../images/keiko/keiko_detail/keiko_03_02.jpeg", "../images/keiko/keiko_detail/keiko_03_03.jpeg"],
         "slug": "keiko_03",
         "topics": [
           {
@@ -69,6 +80,7 @@
         "giftWrap": true,
         "delivery": true,
         "imgUrl": "./images/keiko/keiko_mogador.jpeg",
+        "detailImg": ["../images/keiko/keiko_detail/keiko_04_01.jpeg", "../images/keiko/keiko_detail/keiko_04_02.jpeg", "../images/keiko/keiko_detail/keiko_04_03.jpeg"],
         "slug": "keiko_04",
         "topics": [
           {
@@ -89,6 +101,7 @@
         "giftWrap": true,
         "delivery": true,
         "imgUrl": "./images/keiko/keiko_isles_lointaines.jpeg",
+        "detailImg": ["../images/keiko/keiko_detail/keiko_05_01.jpeg", "../images/keiko/keiko_detail/keiko_05_02.jpeg", "../images/keiko/keiko_detail/keiko_05_03.jpeg"],
         "slug": "keiko_05",
         "topics": [
           {
@@ -109,6 +122,7 @@
         "giftWrap": true,
         "delivery": true,
         "imgUrl": "./images/keiko/keiko_hanae.jpeg",
+        "detailImg": ["../images/keiko/keiko_detail/keiko_06_01.jpeg", "../images/keiko/keiko_detail/keiko_06_02.jpeg", "../images/keiko/keiko_detail/keiko_06_03.jpeg"],
         "slug": "keiko_06",
         "topics": [
           {
@@ -129,6 +143,7 @@
         "giftWrap": true,
         "delivery": true,
         "imgUrl": "./images/keiko/keiko_clear_obscur.jpeg",
+        "detailImg": ["../images/keiko/keiko_detail/keiko_07_01.jpeg", "../images/keiko/keiko_detail/keiko_07_02.jpeg", "../images/keiko/keiko_detail/keiko_07_03.jpeg"],
         "slug": "keiko_07",
         "topics": [
           {
@@ -149,6 +164,7 @@
         "giftWrap": true,
         "delivery": true,
         "imgUrl": "./images/keiko/keiko_loukhoum.jpeg",
+        "detailImg": ["../images/keiko/keiko_detail/keiko_08_01.jpeg", "../images/keiko/keiko_detail/keiko_08_02.jpeg", "../images/keiko/keiko_detail/keiko_08_03.jpeg"],
         "slug": "keiko_08",
         "topics": [
           {
@@ -169,6 +185,7 @@
         "giftWrap": true,
         "delivery": true,
         "imgUrl": "./images/keiko/keiko_balde_roses.jpeg",
+        "detailImg": ["../images/keiko/keiko_detail/keiko_09_01.jpeg", "../images/keiko/keiko_detail/keiko_09_02.jpeg", "../images/keiko/keiko_detail/keiko_09_03.jpeg"],
         "slug": "keiko_09",
         "topics": [
           {
@@ -197,6 +214,7 @@
         "giftWrap": false,
         "delivery": true,
         "imgUrl": "./images/ramon/ramon_cherry.jpeg",
+        "detailImg": ["../images/ramon/ramon_detail/ramon_01_01.jpeg"],
         "slug": "ramon_11",
         "topics": [
           {
@@ -217,6 +235,7 @@
         "giftWrap": false,
         "delivery": true,
         "imgUrl": "./images/ramon/ramon_cotton.jpeg",
+        "detailImg": ["../images/ramon/ramon_detail/ramon_02_01.jpeg"],
         "slug": "ramon_12",
         "topics": [
           {
@@ -237,6 +256,7 @@
         "giftWrap": false,
         "delivery": true,
         "imgUrl": "./images/ramon/ramon_agar.jpeg",
+        "detailImg": ["../images/ramon/ramon_detail/ramon_03_01.jpeg"],
         "slug": "ramon_13",
         "topics": [
           {
@@ -257,6 +277,7 @@
         "giftWrap": false,
         "delivery": true,
         "imgUrl": "./images/ramon/ramon_kiss_my_name.jpeg",
+        "detailImg": ["../images/ramon/ramon_detail/ramon_04_01.jpeg"],
         "slug": "ramon_14",
         "topics": [
           {
@@ -277,6 +298,7 @@
         "giftWrap": false,
         "delivery": true,
         "imgUrl": "./images/ramon/ramon_impossible_iris.jpeg",
+        "detailImg": ["../images/ramon/ramon_detail/ramon_05_01.jpeg"],
         "slug": "ramon_15",
         "topics": [
           {
@@ -297,6 +319,7 @@
         "giftWrap": false,
         "delivery": true,
         "imgUrl": "./images/ramon/ramon_entre_naranjos.jpeg",
+        "detailImg": ["../images/ramon/ramon_detail/ramon_06_01.jpeg"],
         "slug": "ramon_16",
         "topics": [
           {
@@ -317,6 +340,7 @@
         "giftWrap": false,
         "delivery": true,
         "imgUrl": "./images/ramon/ramon_lovely_day.jpeg",
+        "detailImg": ["../images/ramon/ramon_detail/ramon_07_01.jpeg"],
         "slug": "ramon_17",
         "topics": [
           {
@@ -337,6 +361,7 @@
         "giftWrap": false,
         "delivery": true,
         "imgUrl": "./images/ramon/ramon_mon_patchouly.jpeg",
+        "detailImg": ["../images/ramon/ramon_detail/ramon_08_01.jpeg"],
         "slug": "ramon_18",
         "topics": [
           {
@@ -357,6 +382,7 @@
         "giftWrap": false,
         "delivery": true,
         "imgUrl": "./images/ramon/ramon_flamenco.jpeg",
+        "detailImg": ["../images/ramon/ramon_detail/ramon_09_01.jpeg"],
         "slug": "ramon_19",
         "topics": [
           {
@@ -377,6 +403,7 @@
         "giftWrap": false,
         "delivery": true,
         "imgUrl": "./images/ramon/ramon_monbloom.jpeg",
+        "detailImg": ["../images/ramon/ramon_detail/ramon_10_01.jpeg"],
         "slug": "ramon_20",
         "topics": [
           {
@@ -405,6 +432,7 @@
         "giftWrap": true,
         "delivery": true,
         "imgUrl": "./images/nishane/nishane_ambra_calabrea.jpeg",
+        "detailImg": ["../images/nishane/nishane_detail/nishane_01_01.jpeg"],
         "slug": "nishane_21",
         "topics": [
           {
@@ -425,6 +453,7 @@
         "giftWrap": true,
         "delivery": true,
         "imgUrl": "./images/nishane/nishane_wulongcha.jpeg",
+        "detailImg": ["../images/nishane/nishane_detail/nishane_02_01.jpeg"],
         "slug": "nishane_22",
         "topics": [
           {
@@ -445,6 +474,7 @@
         "giftWrap": true,
         "delivery": true,
         "imgUrl": "./images/nishane/nishane_sultan_vetiver.jpeg",
+        "detailImg": ["../images/nishane/nishane_detail/nishane_03_01.jpeg"],
         "slug": "nishane_23",
         "topics": [
           {
@@ -465,6 +495,7 @@
         "giftWrap": true,
         "delivery": true,
         "imgUrl": "./images/nishane/nishane_suede_et_safran.jpeg",
+        "detailImg": ["../images/nishane/nishane_detail/nishane_04_01.jpeg"],
         "slug": "nishane_24",
         "topics": [
           {
@@ -485,6 +516,7 @@
         "giftWrap": true,
         "delivery": true,
         "imgUrl": "./images/nishane/nishane_pachuli_kozha.jpeg",
+        "detailImg": ["../images/nishane/nishane_detail/nishane_05_01.jpeg"],
         "slug": "nishane_25",
         "topics": [
           {
@@ -505,6 +537,7 @@
         "giftWrap": true,
         "delivery": true,
         "imgUrl": "./images/nishane/nishane_afrika_olifant.jpeg",
+        "detailImg": ["../images/nishane/nishane_detail/nishane_06_01.jpeg"],
         "slug": "nishane_26",
         "topics": [
           {
@@ -525,6 +558,7 @@
         "giftWrap": true,
         "delivery": true,
         "imgUrl": "./images/nishane/nishane_colognise.jpeg",
+        "detailImg": ["../images/nishane/nishane_detail/nishane_07_01.jpeg"],
         "slug": "nishane_27",
         "topics": [
           {
@@ -545,6 +579,7 @@
         "giftWrap": true,
         "delivery": true,
         "imgUrl": "./images/nishane/nishane_karagoz.jpeg",
+        "detailImg": ["../images/nishane/nishane_detail/nishane_08_01.jpeg"],
         "slug": "nishane_28",
         "topics": [
           {

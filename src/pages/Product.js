@@ -7,13 +7,20 @@ import $ from 'jquery';
 import { addToCart } from '../redux/User';
 import { useDispatch, useSelector } from 'react-redux';
 
-export function ProductDetail(){
+export function ProductDetail( {cont} ){
   return(
     <>
-    <img src='../images/keiko/keiko_all.jpeg' alt='' />
-    <img src='../images/keiko/keiko_detail1.jpeg' alt='' />
-    <img src='../images/keiko/keiko_detail2.jpeg' alt='' />
-    <img src='../images/keiko/keiko_detail3.jpeg' alt='' />
+    {
+      cont.name.includes('케이코') &&
+      (<img src='../images/keiko/keiko_all.jpeg' />) ||
+      cont.name.includes('라몬') &&
+      (<img src='../images/ramon/ramon_all.jpeg' />)
+    }
+    {cont.detailImg.map((item, index)=>{
+      return(
+        <img key={index} src={item} alt='' />
+      )
+    })}
     </>
   )
 }
@@ -219,7 +226,7 @@ export default function Product(){
               <ul>
                 <li><dfn>브랜드</dfn><span>Keiko</span></li>
                 <li><dfn>할인</dfn><span>적용안됨</span></li>
-                <li><dfn>배송비</dfn>{cont.delivery === true && (<span>무료</span>) || (<span>2,500원</span>)}</li>
+                <li><dfn>배송비</dfn>{cont.delivery === true && (<span>무료</span>) || cont.delivery !== true (<span>2,500원</span>)}</li>
               </ul>
             </dd>
           </dl>
@@ -254,7 +261,7 @@ export default function Product(){
           <button type='button'>리뷰 <span>&#40;0&#41;</span></button>
         </div>
         <div className='bottomInfo'>
-          <ProductDetail />
+          <ProductDetail cont={cont}/>
           <ProductGuide />
           <ProductReview cont={cont} />
         </div>
