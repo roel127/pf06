@@ -1,7 +1,9 @@
 import './Community.css';
 import { Link } from 'react-router-dom';
+import noticeData from '../notice.json';
 
 export default function Community(){
+  const notice = noticeData.notice;
   return(
     <div id="commuWrap">
       <p>
@@ -21,17 +23,21 @@ export default function Community(){
             </tr>
           </thead>
           <tbody>
+            {notice.map(item=>{
+              return(
+                <tr key={item.id}>
+                  <td>{item.num}</td>
+                  <td><Link to={item.slug}>{item.subject}</Link></td>
+                  <td>{item.writer}</td>
+                  <td>{item.reportDate}</td>
+                  <td>0000</td>
+                </tr>
+              )
+            })}
             <tr>
               <td>1</td>
               <td><Link to="/community1">메종 사이브라이트 구매 가이드</Link></td>
               <td>ssensefragrance</td>
-              <td>0000-00-00</td>
-              <td>0000</td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td><Link to>메종 사이브라이트 구매 가이드</Link></td>
-              <td>admin</td>
               <td>0000-00-00</td>
               <td>0000</td>
             </tr>

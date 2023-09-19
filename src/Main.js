@@ -22,8 +22,10 @@ export default function Main(){
             <Route path=":slug" element={<Product />} />
           </Route>
           <Route path="/magazine" element={<Magazine />} />
-          <Route path="/community" element={<Community />} />
-          <Route path="/community1" element={<CommunityDetail />} />
+          <Route path="/community">
+            <Route index element={<Community />} />
+            <Route path=":slug" element={<CommunityDetail />} />
+          </Route>
           <Route path="/login" element={<LogIn />} />
         </Routes>
       </App>

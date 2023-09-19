@@ -1,0 +1,36 @@
+{
+  "notice":[
+    {
+      "id": "1",
+      "num": "1",
+      "subject": "메종 사이브라이트 구매 가이드",
+      "writer": "ssensefragrance",
+      "reportDate": "2023-00-00",
+      "slug": "notice01"
+    },
+    {
+      "id": "2",
+      "num": "2",
+      "subject": "메종 사이브라이트 구매 가이드",
+      "writer": "ssensefragrance",
+      "reportDate": "2023-00-00",
+      "slug": "notice02"
+    },
+    {
+      "id": "3",
+      "num": "3",
+      "subject": "메종 사이브라이트 구매 가이드",
+      "writer": "ssensefragrance",
+      "reportDate": "2023-00-00",
+      "slug": "notice03"
+    },
+    {
+      "id": "4",
+      "num": "4",
+      "subject": "메종 사이브라이트 구매 가이드",
+      "writer": "ssensefragrance",
+      "reportDate": "2023-00-00",
+      "slug": "notice04"
+    }
+  ]
+}
