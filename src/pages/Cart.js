@@ -1,7 +1,7 @@
 import './Cart.css';
 import { useDispatch, useSelector } from 'react-redux';
 import data from '../product.json';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { removeToCart, allClear } from '../redux/User';
 
 export function CartEmpty(){
@@ -14,6 +14,12 @@ export function CartEmpty(){
 
 export function CartList( {cartList} ){
   const dispatch = useDispatch();
+  const payPrice = cartList.reduce((acc, cur)=>{
+    const eachPrice = Number(cur.price.replace(',',''));
+    return acc += eachPrice * cur.count;
+  }, 0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  
+  console.log(cartList);
   return(
     <div className="cartList">
       <p>
@@ -50,7 +56,7 @@ export function CartList( {cartList} ){
                 <td>
                   <ul>
                     <li><button type='button'>주문하기</button></li>
-                    <li><button /* onClick={()=>dispatch(removeToCart(item.id))} */ type='button'>삭제</button></li>
+                    <li><button onClick={()=>dispatch(removeToCart(item.id))} type='button'>삭제</button></li>
                   </ul>
                 </td>
               </tr>
@@ -60,7 +66,7 @@ export function CartList( {cartList} ){
       </table>
       <p>
         결제금액
-        <span>0,000,000<b>원</b></span>
+        <span>{payPrice}원</span>
       </p>
       <p>
         <button>선택 상품 주문</button>
@@ -73,7 +79,9 @@ export function CartList( {cartList} ){
 export default function Cart(){
   const { cartProductIds } = useSelector(state=>state.cart);
   const dispatch = useDispatch();
-  let cartList = [];
+  // let cartList = [];
+  const [cartList, setCartList] = useState([]);
+  let subList = [];
 
   cartProductIds.forEach(item=>{
     const qoo = item.brand;
@@ -81,20 +89,24 @@ export default function Cart(){
       if(item.id === val.id){
         val.count = item.count;
         val.times = item.times;
-        cartList.unshift(val);
+        subList.unshift(val);
       }
     })
-    cartList.sort((a,b)=>a.times > b.times ? -1 : a.times < b.times ? 1 : 0);
   })
+  useEffect(()=>{
+    setCartList(subList);
+  }, [cartProductIds])
+  cartList.sort((a,b)=>a.times > b.times ? -1 : a.times < b.times ? 1 : 0);
+  
 
   return(
     <div id='cartWrap'>
       {
-        cartProductIds.length > 1 &&
+        cartList.length >= 1 &&
         <CartList cartList={cartList} />
       }
       {
-        cartProductIds.length < 1 &&
+        cartList.length < 1 &&
         (<CartEmpty />)
       }
       

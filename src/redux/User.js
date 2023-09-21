@@ -16,7 +16,7 @@ const user = createSlice({
       state.cartProductIds = [...state.cartProductIds, add];
     },
     removeToCart(state, action){
-      // state.cartProductIds = state.cartProductIds.filter(item=>(item.id !== action.payload));
+      state.cartProductIds = state.cartProductIds.filter(item=>(item.id !== action.payload));
     },
     allClear(state){
       state.cartProductIds = [];
