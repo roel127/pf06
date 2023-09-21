@@ -226,7 +226,7 @@ export default function Product(){
               <ul>
                 <li><dfn>브랜드</dfn><span>Keiko</span></li>
                 <li><dfn>할인</dfn><span>적용안됨</span></li>
-                <li><dfn>배송비</dfn>{cont.delivery === true && (<span>무료</span>) || cont.delivery !== true (<span>2,500원</span>)}</li>
+                <li><dfn>배송비</dfn>{cont.delivery === true && (<span>무료</span>) || cont.delivery !== true && (<span>2,500원</span>)}</li>
               </ul>
             </dd>
           </dl>
