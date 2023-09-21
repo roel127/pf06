@@ -1,7 +1,18 @@
+import $ from 'jquery';
 import { Link } from "react-router-dom"
 import { FiShoppingCart, FiUser, FiSearch } from 'react-icons/fi';
 
 export default function Header(){
+  $(function(){
+    $('nav>ul>li:has(ul)')
+    .on('mouseenter', function(){
+      $(this).children('ul').show();
+    })
+    .on('mouseleave', function(){
+      $(this).children('ul').hide();
+    })
+  })
+
   return(
     <header>
       <div>
@@ -36,10 +47,10 @@ export default function Header(){
               </ul>
             </li>
             <li>
-              <Link to="Magazine">Magazine</Link>
+              <Link to>Magazine</Link>
               <ul>
-                <li><Link to>Citrus</Link></li>
-                <li><Link to>Fruity</Link></li>
+                <li><Link to="/citrus">Citrus</Link></li>
+                <li><Link to="/fruity">Fruity</Link></li>
               </ul>
             </li>
             <li>

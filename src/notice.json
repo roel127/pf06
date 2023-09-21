@@ -1,4 +1,16 @@
 {
+  "magazine":[
+    {
+      "name": "citrus",
+      "imgUrl": "./images/magazine/magazine_01.jpeg",
+      "slug": "citrus"
+    },
+    {
+      "name": "fruity",
+      "imgUrl": "./images/magazine/magazine_02.jpeg",
+      "slug": "fruity"
+    }
+  ],
   "notice":[
     {
       "id": "1",

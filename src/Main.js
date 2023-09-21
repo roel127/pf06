@@ -21,7 +21,10 @@ export default function Main(){
             <Route index element={<ProductList />} />
             <Route path=":slug" element={<Product />} />
           </Route>
-          <Route path="/magazine" element={<Magazine />} />
+          <Route>
+            <Route path=":slug" element={<Magazine />} />
+            <Route path=":slug" element={<Magazine />} />
+          </Route>
           <Route path="/community">
             <Route index element={<Community />} />
             <Route path=":slug" element={<CommunityDetail />} />
