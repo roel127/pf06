@@ -221,7 +221,7 @@ export default function Product(){
           <dl>
             <dt>{cont.name}</dt>
             <dd>{cont.base.join(', ')}</dd>
-            <dd>{cont.price}</dd>
+            <dd>{cont.price}원</dd>
             <dd>
               <ul>
                 <li><dfn>브랜드</dfn><span>Keiko</span></li>
