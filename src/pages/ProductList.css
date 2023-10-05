@@ -85,8 +85,9 @@
   width: 48%;
   border: none;
   border-radius: 5px;
+  box-sizing: border-box;
   font-size: 18px;
-  background-color: rgb(104, 193, 104);
+  background-color: #ddd;
   color: #fff;
   padding: 3px 0;
   cursor: pointer;
@@ -95,6 +96,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(251, 246, 157);
-  color: #000;
+  background-color: #b8b1b1;
+  color: #fff;
 }
