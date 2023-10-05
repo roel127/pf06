@@ -60,7 +60,7 @@ export default function Home(){
                     <dl>
                       <dt><Link to={`/product/${item.slug}`}>{item.name}</Link></dt>
                       <dd>{base}</dd>
-                      <dd>{item.price}</dd>
+                      <dd>{item.price}원</dd>
                     </dl>
                   </figcaption>
                 </figure>
@@ -96,7 +96,7 @@ export default function Home(){
                     <dl>
                       <dt><Link to={`/product/${item.slug}`}>{item.name}</Link></dt>
                       <dd>{base}</dd>
-                      <dd>{item.price}</dd>
+                      <dd>{item.price}원</dd>
                     </dl>
                   </figcaption>
                 </figure>
