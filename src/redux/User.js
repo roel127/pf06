@@ -3,7 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
 const user = createSlice({
   name: 'cart',
   initialState: {
-    cartProductIds: []
+    cartProductIds: [],
+    checkProductIds: []
   },
   reducers:{
     addToCart(state, action){
@@ -20,9 +21,15 @@ const user = createSlice({
     },
     allClear(state){
       state.cartProductIds = [];
+    },
+    checkedIds(state, action){
+      state.checkProductIds = [...state.checkProductIds, action.payload];
+    },
+    unCheckedIds(state, action){
+      state.checkProductIds = state.checkProductIds.filter(item=>item !== action.payload);
     }
   }
 })
 
-export const {addToCart, removeToCart, allClear} = user.actions;
+export const {addToCart, removeToCart, allClear, checkedIds, unCheckedIds} = user.actions;
 export default user;
