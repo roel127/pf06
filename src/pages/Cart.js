@@ -20,10 +20,15 @@ export function CartList( {cartList, setCartList} ){
     const eachPrice = Number(cur.price.replace(',',''));
     return acc += eachPrice * cur.count;
   }, 0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-  const chkAll = document.querySelector('input[name = allCheck]');
+  const chkAll = document.getElementById('allCheck');
   const chkList = document.querySelectorAll('input[name = itemCheck]');
 
-  // default
+  console.log(chkAll);  // null
+  console.log(chkList);  // empty array
+  // 최초 render시 DOM에서 catch가 안됨... fix 필요
+  if(chkAll === null){
+    chkAll = document.getElementById('allCheck');
+  }
 
   // checkbox에 onChange로 event.target.value(item.id)를 반환 >> 배열에 unshift 시킴 >> removeToCart를 이용해 삭제시킴
   function checkAll(e){
@@ -59,7 +64,7 @@ export function CartList( {cartList, setCartList} ){
         <thead>
           <tr>
             <th>
-              <input name='allCheck' type='checkbox' onChange={(e)=>checkAll(e)}/>
+              <input id='allCheck' name='allCheck' type='checkbox' onChange={(e)=>checkAll(e)} />
             </th>
             <th>이미지</th>
             <th>상품정보</th>
