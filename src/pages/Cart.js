@@ -1,8 +1,9 @@
 import './Cart.css';
+import $ from 'jquery';
 import { useDispatch, useSelector } from 'react-redux';
 import data from '../product.json';
 import { useEffect, useState } from 'react';
-import { removeToCart, allClear } from '../redux/User';
+import { removeToCart, allClear, checkedIds, unCheckedIds } from '../redux/User';
 
 export function CartEmpty(){
   return(
@@ -12,25 +13,53 @@ export function CartEmpty(){
   )
 }
 
-export function CartList( {cartList} ){
+export function CartList( {cartList, setCartList} ){
+  const { cartProductIds, checkProductIds } = useSelector(state=>state.cart);
   const dispatch = useDispatch();
   const payPrice = cartList.reduce((acc, cur)=>{
     const eachPrice = Number(cur.price.replace(',',''));
     return acc += eachPrice * cur.count;
   }, 0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-  
-  console.log(cartList);
+  const chkAll = document.querySelector('input[name = allCheck]');
+  const chkList = document.querySelectorAll('input[name = itemCheck]');
+
+  // default
+
+  // checkbox에 onChange로 event.target.value(item.id)를 반환 >> 배열에 unshift 시킴 >> removeToCart를 이용해 삭제시킴
+  function checkAll(e){
+    if(e.target.checked === true){
+      chkList.forEach(item=>{
+        item.checked = true;
+      })
+      // checkProductIds 삽입(중복 id 제거)
+    }else{
+      chkList.forEach(item=>{
+        item.checked = false;
+      })
+      // checkProductIds 제거
+    }
+  }
+  function checkItem(e, val){
+    if(e.target.checked === true){
+      if(!checkProductIds.includes(val.id)){
+        dispatch(checkedIds(val.id));
+      }
+    }else{
+      dispatch(unCheckedIds(val.id));
+    }
+  }
+
   return(
     <div className="cartList">
       <p>
-        <button type='button'>선택삭제</button>
+        <button type='button' onClick={()=>console.log(checkProductIds)}>선택삭제</button>
         <button onClick={()=>dispatch(allClear())} type='button'>전체삭제</button>
       </p>
       <table>
         <thead>
           <tr>
             <th>
-              <input type='checkbox'></input>
+              <input name='allCheck' type='checkbox' onChange={(e)=>checkAll(e)}/>
             </th>
             <th>이미지</th>
             <th>상품정보</th>
@@ -46,7 +75,7 @@ export function CartList( {cartList} ){
             return(
               <tr key={item.id}>
                 <td>
-                  <input type='checkbox'></input>
+                  <input name='itemCheck' type='checkbox' onChange={(e)=>checkItem(e, item)} />
                 </td>
                 <td><img src={item.imgUrl} alt={item.name} /></td>
                 <td>{item.name}</td>
@@ -69,8 +98,8 @@ export function CartList( {cartList} ){
         <span>{payPrice}원</span>
       </p>
       <p>
-        <button>선택 상품 주문</button>
-        <button>전체 상품 주문</button>
+        <button type='button'>선택 상품 주문</button>
+        <button type='button'>전체 상품 주문</button>
       </p>
     </div>
   )
@@ -79,7 +108,6 @@ export function CartList( {cartList} ){
 export default function Cart(){
   const { cartProductIds } = useSelector(state=>state.cart);
   const dispatch = useDispatch();
-  // let cartList = [];
   const [cartList, setCartList] = useState([]);
   let subList = [];
 
