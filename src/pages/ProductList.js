@@ -35,9 +35,6 @@ export default function ProductList(){
           <button type="button" value='ramon' onClick={(e)=>changeBrand(e)}>Ramon<span></span></button>
           <button type="button" value='nishane' onClick={(e)=>changeBrand(e)}>Nishane<span></span></button>
       </p>
-      {
-        brandEx.length === 0 ? (<></>) : brandEx.map((item, index)=>{return(<p key={index}>{item}</p>)})
-      }
       <div className="productList">
         <span>전체 <b>{brand.length}</b>개의 제품이 있습니다.</span>
         {brand.map(item=>{
