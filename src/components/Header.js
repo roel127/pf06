@@ -4,13 +4,43 @@ import { FiShoppingCart, FiUser, FiSearch } from 'react-icons/fi';
 
 export default function Header(){
   $(function(){
+    const parentLi = $('nav>ul>li');
+    const childLi = $('nav>ul>li>ul');
+
+    // li:hover 하위 메뉴 처리
     $('nav>ul>li:has(ul)')
     .on('mouseenter', function(){
       $(this).children('ul').show();
     })
     .on('mouseleave', function(){
       $(this).children('ul').hide();
+    });
+    // subMenu:hover 처리
+    childLi.children('li').children('a').on('mouseenter', function(){
+      $(this).addClass('menuHover');
     })
+    .on('mouseleave', function(){
+      $(this).removeClass('menuHover');
+    })
+
+    // li:focus 하위 메뉴 처리 
+    parentLi.children('a').on('focus', function(e){
+      e.preventDefault();
+      const nextUl = $(this).next('ul');
+      const nextLi = $(nextUl).next('li');
+      const hasUl = nextUl[0] !== undefined;
+      if( hasUl ){nextUl.show();} else{nextUl.hide();}
+      // nextUl.show();
+      // childLi.not(':has(li[class = "focusNav"])').hide();
+    })
+
+    childLi.children('li').children('a').on('focus', function(){
+      $(this).parent('li').addClass('focusNav');
+    })
+    .on('focusout', function(){
+      $(this).parent('li').removeClass('focusNav');
+    })
+    // childLi.not(':has(a[class = "focusNav"])').hide();
   })
 
   return(
