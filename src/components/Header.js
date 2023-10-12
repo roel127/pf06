@@ -69,7 +69,7 @@ export default function Header( {clickBrand} ){
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/product">Product</Link>
+              <Link to="/product" onClick={()=>clickBrand('all')}>Product</Link>
               <ul>
                 <li><Link to='/product' onClick={()=>clickBrand('keiko')}>Keiko</Link></li>
                 <li><Link to='/product' onClick={()=>clickBrand('ramon')}>Ramon</Link></li>
