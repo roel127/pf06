@@ -147,6 +147,10 @@ export function ProductGuide(){
   )
 }
 export function ProductReview( {cont} ){
+  function maskingName(val){
+    val = val.replace(/(?<=.{1})./gi, "*");
+    return val;
+  }
   return(
     <div className='review'>
       <p>상품 리뷰</p>
@@ -155,7 +159,7 @@ export function ProductReview( {cont} ){
           return(
             <ul key={index}>
               <li>
-                {item.topic.name}
+                {maskingName(item.topic.name)}
               </li>
               <li>
                 {item.topic.cont}
