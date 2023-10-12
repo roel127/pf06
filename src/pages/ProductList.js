@@ -1,30 +1,37 @@
 import './ProductList.css';
 import $ from 'jquery';
-import data from '../product.json';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart } from '../redux/User';
 import Item from '../components/Item';
 
-export default function ProductList(){
-  const allInit = [
-    ...data.keiko.stuff,
-    ...data.ramon.stuff,
-    ...data.nishane.stuff
-  ]
-  const [brand, setBrand] = useState(allInit);
-  const [brandEx, setBrandEx] = useState([]);
-
+export default function ProductList( {data, brand, brandName, clickBrand}){
   function changeBrand(e){
     const val = e.target.value;
-    e.target.value === 'all' ? setBrand(allInit) : setBrand(data[val].stuff);
-    e.target.value === 'all' ? setBrandEx([]) : setBrandEx(data[val].explain);
+    e.target.value === 'all' ? clickBrand(val) : clickBrand(val);
+    // e.target.value === 'all' ? setBrandEx([]) : setBrandEx(data[val].explain);
   }
   $(function(){
     $('#productWrap>p>button').on('click', function(){
       $('button>span[class = "clickedBtn').removeClass('clickedBtn');
       $(this).children('span').addClass('clickedBtn');
     })
+    if(brandName === 'all'){
+      $('button>span[class = "clickedBtn').removeClass('clickedBtn');
+      $('button[value = all]').children('span').addClass('clickedBtn');
+    }
+    if(brandName === 'keiko'){
+      $('button>span[class = "clickedBtn').removeClass('clickedBtn');
+      $('button[value = keiko]').children('span').addClass('clickedBtn');
+    }
+    if(brandName === 'ramon'){
+      $('button>span[class = "clickedBtn').removeClass('clickedBtn');
+      $('button[value = ramon]').children('span').addClass('clickedBtn');
+    }
+    if(brandName === 'nishane'){
+      $('button>span[class = "clickedBtn').removeClass('clickedBtn');
+      $('button[value = nishane]').children('span').addClass('clickedBtn');
+    }
   })
 
   return(

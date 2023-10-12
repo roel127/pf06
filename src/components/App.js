@@ -3,10 +3,11 @@ import Header from './Header';
 import Footer from './Footer';
 import Recent from './Recent';
 
-function App( {children} ) {
+function App( {children, brand, clickBrand} ) {
+  console.log(brand);
   return (
     <div id="wrap">
-    <Header />
+    <Header clickBrand={clickBrand} />
     <div id="main">
       {children}
     </div>

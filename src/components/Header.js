@@ -2,7 +2,7 @@ import $ from 'jquery';
 import { Link } from "react-router-dom"
 import { FiShoppingCart, FiUser, FiSearch } from 'react-icons/fi';
 
-export default function Header(){
+export default function Header( {clickBrand} ){
   $(function(){
     const parentLi = $('nav>ul>li');
     const childLi = $('nav>ul>li>ul');
@@ -71,9 +71,9 @@ export default function Header(){
             <li>
               <Link to="/product">Product</Link>
               <ul>
-                <li><Link to>Keiko</Link></li>
-                <li><Link to>Ramon</Link></li>
-                <li><Link to>Nashane</Link></li>
+                <li><Link to='/product' onClick={()=>clickBrand('keiko')}>Keiko</Link></li>
+                <li><Link to='/product' onClick={()=>clickBrand('ramon')}>Ramon</Link></li>
+                <li><Link to='/product' onClick={()=>clickBrand('nishane')}>Nishane</Link></li>
               </ul>
             </li>
             <li>
