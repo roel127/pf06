@@ -4,7 +4,6 @@ import Footer from './Footer';
 import Recent from './Recent';
 
 function App( {children, brand, clickBrand} ) {
-  console.log(brand);
   return (
     <div id="wrap">
     <Header clickBrand={clickBrand} />
