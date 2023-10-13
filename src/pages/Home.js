@@ -1,7 +1,6 @@
 import './Home.css';
 import data from '../product.json';
 import { Link } from 'react-router-dom';
-// import { cartProductIds } from '../redux/User';
 // swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';

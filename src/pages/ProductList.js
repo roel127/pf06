@@ -1,16 +1,13 @@
 import './ProductList.css';
 import $ from 'jquery';
-import { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { addToCart } from '../redux/User';
 import Item from '../components/Item';
 
 export default function ProductList( {data, brand, brandName, clickBrand}){
   function changeBrand(e){
     const val = e.target.value;
     e.target.value === 'all' ? clickBrand(val) : clickBrand(val);
-    // e.target.value === 'all' ? setBrandEx([]) : setBrandEx(data[val].explain);
   }
+  
   $(function(){
     $('#productWrap>p>button').on('click', function(){
       $('button>span[class = "clickedBtn').removeClass('clickedBtn');

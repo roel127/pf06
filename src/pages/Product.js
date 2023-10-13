@@ -3,7 +3,6 @@ import './Product.css';
 import { HiStar, HiMinus, HiPlus, HiGift} from 'react-icons/hi';
 import { useParams } from 'react-router-dom';
 import data from '../product.json';
-import $ from 'jquery';
 import { addToCart } from '../redux/User';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -184,8 +183,6 @@ export default function Product(){
   })[0];
 
   const totalPrice = Number(cont.price.replace(',','')) * countItem;
-  console.log(cartProductIds);
-  // console.log(cont)
   return(
     <div id='detail'>
       <section>

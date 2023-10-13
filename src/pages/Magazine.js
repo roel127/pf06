@@ -7,10 +7,9 @@ export default function Magazine(){
   const params = useParams();
   const mgz = noticeData.magazine.filter(item=>{
     if(item.slug === params.slug){
-      return item
+      return item;
     }
   })
-  console.log(mgz)
   return(
     <div id="mgWrap">
       <div className='mgInfo'>

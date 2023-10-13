@@ -1,5 +1,4 @@
 import './Cart.css';
-import $ from 'jquery';
 import { useDispatch, useSelector } from 'react-redux';
 import data from '../product.json';
 import { useEffect, useRef, useState } from 'react';

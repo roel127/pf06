@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import { Link } from "react-router-dom"
-import { FiShoppingCart, FiUser, FiSearch } from 'react-icons/fi';
+import { FiSearch } from 'react-icons/fi';
 
 export default function Header( {clickBrand} ){
   $(function(){

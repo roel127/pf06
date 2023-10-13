@@ -24,5 +24,3 @@ export default function CommunityDetail(){
     </>
   )
 }
-
-// path에 따른 데이터와 연결
