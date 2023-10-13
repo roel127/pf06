@@ -19,16 +19,13 @@ export default function ProductList( {data, brand, brandName, clickBrand}){
     if(brandName === 'all'){
       $('button>span[class = "clickedBtn').removeClass('clickedBtn');
       $('button[value = all]').children('span').addClass('clickedBtn');
-    }
-    if(brandName === 'keiko'){
+    } else if(brandName === 'keiko'){
       $('button>span[class = "clickedBtn').removeClass('clickedBtn');
       $('button[value = keiko]').children('span').addClass('clickedBtn');
-    }
-    if(brandName === 'ramon'){
+    } else if(brandName === 'ramon'){
       $('button>span[class = "clickedBtn').removeClass('clickedBtn');
       $('button[value = ramon]').children('span').addClass('clickedBtn');
-    }
-    if(brandName === 'nishane'){
+    } else if(brandName === 'nishane'){
       $('button>span[class = "clickedBtn').removeClass('clickedBtn');
       $('button[value = nishane]').children('span').addClass('clickedBtn');
     }
