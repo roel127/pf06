@@ -2,7 +2,7 @@ import './Cart.css';
 import $ from 'jquery';
 import { useDispatch, useSelector } from 'react-redux';
 import data from '../product.json';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { removeToCart, allClear, checkedIds, unCheckedIds } from '../redux/User';
 
 export function CartEmpty(){
@@ -20,37 +20,41 @@ export function CartList( {cartList, setCartList} ){
     const eachPrice = Number(cur.price.replace(',',''));
     return acc += eachPrice * cur.count;
   }, 0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-  const chkAll = document.getElementById('allCheck');
-  const chkList = document.querySelectorAll('input[name = itemCheck]');
+  const refInputAll = useRef();
+  const refInput = useRef([]);
 
-  console.log(chkAll);  // null
-  console.log(chkList);  // empty array
-  // 최초 render시 DOM에서 catch가 안됨... fix 필요
-  if(chkAll === null){
-    chkAll = document.getElementById('allCheck');
-  }
-
-  // checkbox에 onChange로 event.target.value(item.id)를 반환 >> 배열에 unshift 시킴 >> removeToCart를 이용해 삭제시킴
   function checkAll(e){
-    if(e.target.checked === true){
-      chkList.forEach(item=>{
+    const isChecked = e.target.checked;
+    if(isChecked){
+      refInput.current.forEach(item=>{
         item.checked = true;
       })
-      // checkProductIds 삽입(중복 id 제거)
-    }else{
-      chkList.forEach(item=>{
+    } else{
+      refInput.current.forEach(item=>{
         item.checked = false;
       })
-      // checkProductIds 제거
     }
   }
   function checkItem(e, val){
-    if(e.target.checked === true){
+    const isChecked = e.target.checked;
+    let itemCheck = [];
+
+    if(isChecked === true){
       if(!checkProductIds.includes(val.id)){
         dispatch(checkedIds(val.id));
       }
     }else{
       dispatch(unCheckedIds(val.id));
+    }
+    
+    // 각 input 선택 시 전체선택input 변경
+    refInput.current.forEach(item=>{
+      item.checked === true ? itemCheck.unshift(true) : itemCheck.unshift(false);
+    })
+    if(itemCheck.includes(false)){
+      refInputAll.current.checked = false;
+    } else{
+      refInputAll.current.checked = true;
     }
   }
 
@@ -64,7 +68,7 @@ export function CartList( {cartList, setCartList} ){
         <thead>
           <tr>
             <th>
-              <input id='allCheck' name='allCheck' type='checkbox' onChange={(e)=>checkAll(e)} />
+              <input onClick={(e)=>checkAll(e)} id='allCheck' name='allCheck' type='checkbox' ref={refInputAll} defaultChecked />
             </th>
             <th>이미지</th>
             <th>상품정보</th>
@@ -75,12 +79,12 @@ export function CartList( {cartList, setCartList} ){
           </tr>
         </thead>
         <tbody>
-          {cartList.map(item=>{
+          {cartList.map((item, index)=>{
               const totalPrice = Number(item.price.replace(',','')) * item.count;
             return(
               <tr key={item.id}>
                 <td>
-                  <input name='itemCheck' type='checkbox' onChange={(e)=>checkItem(e, item)} />
+                  <input ref={(element)=>refInput.current[index] = element} name='itemCheck' type='checkbox' onChange={(e)=>checkItem(e, item)} defaultChecked />
                 </td>
                 <td><img src={item.imgUrl} alt={item.name} /></td>
                 <td>{item.name}</td>
