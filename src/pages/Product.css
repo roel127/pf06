@@ -237,6 +237,11 @@
   width: 1300px;
   margin: 0 auto;
 }
+.fixed{
+  position: fixed;
+  width: 1300px;
+  top: 0;
+}
 .bottomBtn{
   display: flex;
   justify-content: center;
