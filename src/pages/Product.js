@@ -186,17 +186,22 @@ export default function Product(){
   window.addEventListener('scroll', function(){
     if(this.window.scrollY > 1000){
       document.querySelector('.bottomBtn').classList.add('fixed');
+      document.querySelector('.bottomInfo>img:first-child').style.marginTop = '65px';
     } else{
       document.querySelector('.bottomBtn').classList.remove('fixed');
+      document.querySelector('.bottomInfo>img:first-child').style.marginTop = 0;
     }
+    // console.log(this.scrollY);
   })
   function scrollClick(e){
     const text = e.target.textContent;
     const itemInfo = document.querySelector('.bottomInfo').offsetTop;
     const itemGuide = document.querySelector('.guide').offsetTop;
     const itemReview = document.querySelector('.review').offsetTop;
+    const height = document.querySelector('.bottomBtn').offsetHeight;
     if(text === '제품상세'){
-      window.scrollTo({top: itemInfo - 85, behavior: 'smooth'});
+      window.scrollTo({top: itemInfo - height, behavior: 'smooth'});
+      document.querySelector('.bottomInfo>img:first-child').style.marginTop = '65px';
     } else if(text === '상품구매안내'){
       window.scrollTo({top: itemGuide - 85, behavior: 'smooth'});
     } else{
