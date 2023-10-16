@@ -1,14 +1,7 @@
 import './Home.css';
 import data from '../product.json';
 import { Link } from 'react-router-dom';
-// swiper
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import { Pagination, Navigation, Autoplay, Mousewheel } from 'swiper/modules';
-
-
+import { SwiperBanner, SwiperProduct } from './sep/Swiper';
 
 export default function Home(){
   const bestItems = data.best;
@@ -16,22 +9,7 @@ export default function Home(){
   return(
     <>
     <div className='banner'>
-      <Swiper
-      pagination={{
-        type: 'fraction',
-      }}
-      loop={true}
-      autoplay={{
-        delay: 2500,
-      }}
-      navigation={true}
-      modules={[Pagination, Navigation, Autoplay]}
-      className="mySwiper"
-      >
-        <SwiperSlide><img src='./images/banner/banner_01.jpeg' alt='' /></SwiperSlide>
-        <SwiperSlide><img src='./images/banner/banner_02.jpeg' alt='' /></SwiperSlide>
-        <SwiperSlide><img src='./images/banner/banner_01.jpeg' alt='' /></SwiperSlide>
-      </Swiper>
+      <SwiperBanner />
     </div>
     <div className='bestItem'>
       <div className='subject'>
@@ -39,34 +17,7 @@ export default function Home(){
         <p>쎈스프래그런스에서 가장 인기있는 향수를 모아봤어요</p>
       </div>
       <div className='homeList'>
-        <Swiper
-          slidesPerView={3.5}
-          spaceBetween={30}
-          mousewheel={{
-            forceToAxis: true,
-          }}
-          modules={[Pagination, Mousewheel]}
-          className="mySwiper"
-        >
-          {bestItems.map((item, index)=>{
-            const base = item.base.join(', ');
-            return(
-              <SwiperSlide key={item.slug}>
-                <figure>
-                  <Link to={`/product/${item.slug}`}><img src={item.imgUrl} alt={item.name}/></Link>
-                  <span>{index+1}</span>
-                  <figcaption>
-                    <dl>
-                      <dt><Link to={`/product/${item.slug}`}>{item.name}</Link></dt>
-                      <dd>{base}</dd>
-                      <dd>{item.price}원</dd>
-                    </dl>
-                  </figcaption>
-                </figure>
-              </SwiperSlide>
-            )
-          })}
-        </Swiper>
+        <SwiperProduct products={bestItems} />
       </div>
     </div>
     <div className='newItem'>
@@ -75,34 +26,7 @@ export default function Home(){
         <p>이번에 새로 출시된 향수들이에요</p>
       </div>
       <div className='homeList'>
-        <Swiper
-          slidesPerView={3.5}
-          spaceBetween={30}
-          mousewheel={{
-            forceToAxis: true,
-          }}
-          modules={[Pagination, Mousewheel]}
-          className="mySwiper"
-        >
-          {newItems.map((item)=>{
-            const base = item.base.join(', ')
-            return(
-              <SwiperSlide key={item.id}>
-                <figure>
-                  <Link to={`/product/${item.slug}`}><img src={item.imgUrl} alt={item.name}/></Link>
-                  <span>New</span>
-                  <figcaption>
-                    <dl>
-                      <dt><Link to={`/product/${item.slug}`}>{item.name}</Link></dt>
-                      <dd>{base}</dd>
-                      <dd>{item.price}원</dd>
-                    </dl>
-                  </figcaption>
-                </figure>
-              </SwiperSlide>
-            )
-          })}
-        </Swiper>
+        <SwiperProduct products={newItems} children={'new'}/> 
       </div>
     </div>
     <div className='sectionVideo'>
