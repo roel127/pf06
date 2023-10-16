@@ -4,7 +4,7 @@ export default function Footer(){
   return(
     <footer>
       <div>
-        <img src="./images/logo_footer.png" alt="" />
+        <img src="/images/logo_footer.png" alt="센스프레그" />
         <div>
           <ul>
             <li><span>고객센터 </span>000-0000-0000</li>

@@ -47,7 +47,7 @@ export default function Header( {clickBrand} ){
     <header>
       <div>
         <h1>
-          <Link to="/"><img src="./images/logo.png" alt="ssense fragrance"/></Link>
+          <Link to="/"><img src="/images/logo.png" alt="ssense fragrance"/></Link>
         </h1>
         <ul>
           <li>
