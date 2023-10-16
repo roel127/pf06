@@ -1,13 +1,14 @@
 import { HiMinus, HiPlus, HiGift } from 'react-icons/hi';
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addToCart } from '../../redux/User';
+import { carting } from './util';
 
 export default function( {cont, str} ){
   const [countItem, setCountItem] = useState(1);
   const totalPrice = Number(cont.price.replace(',','')) * countItem;
   const { cartProductIds } = useSelector(state=>state.cart);
   const dispatch = useDispatch();
+  const brand = str[0];
 
   return(
     <div className='topInfo'>
@@ -43,7 +44,7 @@ export default function( {cont, str} ){
       <p><button type='button'><HiGift />선물하기</button></p>
       <p>
         <button type='button'>바로 구매</button>
-        <button type='button' onClick={ ()=> cartProductIds.filter(item=>item.id == cont.id).length >= 1 ? alert('이미 장바구니에 있습니다.') : dispatch(addToCart({id:cont.id, brand:str[0], count:countItem})) }>장바구니</button>
+        <button type='button' onClick={()=>carting(cartProductIds, dispatch, cont, brand, countItem)}>장바구니</button>
       </p>
     </div>
   )

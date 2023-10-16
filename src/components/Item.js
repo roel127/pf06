@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-
-import { addToCart } from "../redux/User";
 import { useDispatch, useSelector } from "react-redux";
+import { carting } from "../pages/sep/util";
 
 export default function Item( {item} ){
   const { cartProductIds } = useSelector(state=>state.cart);
   const dispatch = useDispatch();
+  const brand = item.slug.split('_')[0];
   return(
     <figure>
       <Link to={item.slug}><img src={item.imgUrl} alt={item.name} /></Link>
@@ -16,7 +16,7 @@ export default function Item( {item} ){
           <dd>{item.price}원</dd>
           <dd>
             <button type="button">찜하기</button>
-            <button onClick={ ()=> cartProductIds.filter(val=>val.id == item.id).length >= 1 ? alert('이미 장바구니에 있습니다.') : dispatch(addToCart({id:item.id, brand:item.slug.split('_')[0], count:1})) } type="button">장바구니</button>
+            <button onClick={()=> carting(cartProductIds, dispatch, item, brand)} type="button">장바구니</button>
           </dd>
         </dl>
       </figcaption>
