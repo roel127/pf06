@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { removeToCart, allClear, checkedIds, unCheckedIds } from '../../redux/User';
 
 export function CartEmpty(){
@@ -20,15 +20,32 @@ export function CartList( {cartList} ){
   const refInputAll = useRef();
   const refInput = useRef([]);
 
+  useEffect(()=>{
+    if(refInput.current.includes(null)){
+      for(let i in refInput.current){
+        if(refInput.current[i] === null){
+          refInput.current.splice(i,1);
+          i--;
+        } 
+      }
+    }
+  }, [cartList]);
+
   function checkAll(e){
     const isChecked = e.target.checked;
     if(isChecked){
       refInput.current.forEach(item=>{
-        item.checked = true;
+        if(item !== null){item.checked = true;}
+      });
+      cartProductIds.forEach(item=>{
+        dispatch(checkedIds(item.id));
       })
     } else{
       refInput.current.forEach(item=>{
-        item.checked = false;
+        if(item !== null){item.checked = false;}
+      })
+      cartProductIds.forEach(item=>{
+        dispatch(unCheckedIds(item.id));
       })
     }
   }
@@ -65,7 +82,9 @@ export function CartList( {cartList} ){
     },[]);
     chkItem.forEach(rmItem=>{
       dispatch(removeToCart(rmItem.id));
+      dispatch(unCheckedIds(rmItem.id));
     })
+    console.log(refInput.current);
   }
 
   return(
