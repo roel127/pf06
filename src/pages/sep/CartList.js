@@ -10,7 +10,7 @@ export function CartEmpty(){
   )
 }
 
-export function CartList( {cartList, setCartList} ){
+export function CartList( {cartList} ){
   const { cartProductIds, checkProductIds } = useSelector(state=>state.cart);
   const dispatch = useDispatch();
   const payPrice = cartList.reduce((acc, cur)=>{
@@ -36,7 +36,7 @@ export function CartList( {cartList, setCartList} ){
     const isChecked = e.target.checked;
     let itemCheck = [];
 
-    if(isChecked === true){
+    if(isChecked){
       if(!checkProductIds.includes(val.id)){
         dispatch(checkedIds(val.id));
       }
@@ -54,18 +54,31 @@ export function CartList( {cartList, setCartList} ){
       refInputAll.current.checked = true;
     }
   }
+  function eachRemove(){
+    const chkItem = cartProductIds.reduce((acc, cur)=>{
+      checkProductIds.forEach(item=>{
+        if(item === cur.id){
+          acc = [...acc, cur];
+        }
+      })
+      return acc;
+    },[]);
+    chkItem.forEach(rmItem=>{
+      dispatch(removeToCart(rmItem.id));
+    })
+  }
 
   return(
     <div className="cartList">
       <p>
-        <button type='button' onClick={()=>console.log(checkProductIds)}>선택삭제</button>
+        <button type='button' onClick={()=>eachRemove()}>선택삭제</button>
         <button onClick={()=>dispatch(allClear())} type='button'>전체삭제</button>
       </p>
       <table>
         <thead>
           <tr>
             <th>
-              <input onClick={(e)=>checkAll(e)} id='allCheck' name='allCheck' type='checkbox' ref={refInputAll} defaultChecked />
+              <input onClick={(e)=>checkAll(e)} id='allCheck' name='allCheck' type='checkbox' ref={refInputAll} />
             </th>
             <th>이미지</th>
             <th>상품정보</th>
@@ -81,7 +94,8 @@ export function CartList( {cartList, setCartList} ){
             return(
               <tr key={item.id}>
                 <td>
-                  <input ref={(element)=>refInput.current[index] = element} name='itemCheck' type='checkbox' onChange={(e)=>checkItem(e, item)} defaultChecked />
+                  <input ref={(element)=>refInput.current[index] = element}
+                  name='itemCheck' type='checkbox' onChange={(e)=>checkItem(e, item)} />
                 </td>
                 <td><img src={item.imgUrl} alt={item.name} /></td>
                 <td>{item.name}</td>
