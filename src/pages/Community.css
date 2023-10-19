@@ -14,14 +14,13 @@
   font-size: 14px;
   line-height: 25px;
 }
-.bbs{
-  margin-bottom: 20px;
-}
+
 .bbs>table{
   width: 100%;
   text-align: center;
   border-top: 1px solid #cfcfcf;
   border-collapse: collapse;
+  margin-bottom: 30px;
 }
 .bbs th, .bbs td{
   border-bottom: 1px solid #ddd;
