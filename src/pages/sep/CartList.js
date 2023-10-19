@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { removeToCart, allClear, checkedIds, unCheckedIds } from '../../redux/User';
 
 export function CartEmpty(){
@@ -12,11 +12,11 @@ export function CartEmpty(){
 
 export function CartList( {cartList} ){
   const { cartProductIds, checkProductIds } = useSelector(state=>state.cart);
+  const [total, setTotal] = useState(0);
   const dispatch = useDispatch();
-  const payPrice = cartList.reduce((acc, cur)=>{
-    const eachPrice = Number(cur.price.replace(',',''));
-    return acc += eachPrice * cur.count;
-  }, 0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  const allPrice = cartList.reduce((acc, cur)=>{
+    return acc += Number(cur.price.replace(',','')) * cur.count;
+  }, 0);
   const refInputAll = useRef();
   const refInput = useRef([]);
 
@@ -35,30 +35,35 @@ export function CartList( {cartList} ){
     const isChecked = e.target.checked;
     if(isChecked){
       refInput.current.forEach(item=>{
-        if(item !== null){item.checked = true;}
+        item.checked = true;
       });
       cartProductIds.forEach(item=>{
         dispatch(checkedIds(item.id));
       })
+      setTotal(allPrice);
     } else{
       refInput.current.forEach(item=>{
-        if(item !== null){item.checked = false;}
+        item.checked = false;
       })
       cartProductIds.forEach(item=>{
         dispatch(unCheckedIds(item.id));
       })
+      setTotal(0);
     }
   }
   function checkItem(e, val){
     const isChecked = e.target.checked;
     let itemCheck = [];
+    const num = Number(val.price.replace(',','')) * val.count;
 
     if(isChecked){
       if(!checkProductIds.includes(val.id)){
         dispatch(checkedIds(val.id));
       }
+      setTotal(total+num);
     }else{
       dispatch(unCheckedIds(val.id));
+      setTotal(total-num);
     }
     
     // 각 input 선택 시 전체선택input 변경
@@ -134,7 +139,7 @@ export function CartList( {cartList} ){
       </table>
       <p>
         결제금액
-        <span>{payPrice}원</span>
+        <span>{total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}원</span>
       </p>
       <p>
         <button type='button'>선택 상품 주문</button>
