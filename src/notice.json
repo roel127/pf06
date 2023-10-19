@@ -18,7 +18,8 @@
       "subject": "메종 사이브라이트 구매 가이드",
       "writer": "ssensefragrance",
       "reportDate": "2023-00-00",
-      "slug": "notice01"
+      "slug": "notice01",
+      "cont": "hello. first."
     },
     {
       "id": "2",
@@ -26,7 +27,8 @@
       "subject": "메종 사이브라이트 구매 가이드",
       "writer": "ssensefragrance",
       "reportDate": "2023-00-00",
-      "slug": "notice02"
+      "slug": "notice02",
+      "cont": "hello. second."
     },
     {
       "id": "3",
@@ -34,15 +36,17 @@
       "subject": "메종 사이브라이트 구매 가이드",
       "writer": "ssensefragrance",
       "reportDate": "2023-00-00",
-      "slug": "notice03"
+      "slug": "notice03",
+      "cont": "hello. third."
     },
     {
-      "id": "4",
+      "id": "14",
       "num": "4",
       "subject": "메종 사이브라이트 구매 가이드",
       "writer": "ssensefragrance",
       "reportDate": "2023-00-00",
-      "slug": "notice04"
+      "slug": "notice04",
+      "cont": "hello. fourth."
     }
   ]
 }
