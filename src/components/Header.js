@@ -2,7 +2,14 @@ import $ from 'jquery';
 import { Link } from "react-router-dom"
 import { FiSearch } from 'react-icons/fi';
 
-export default function Header( {clickBrand} ){
+export function LogOut({handler, k}){
+  return(
+    <Link to="/" onClick={()=>handler()} className='loginBtn'>로그아웃</Link>
+  )
+}
+
+export default function Header( {clickBrand, myLog, handler} ){
+  // when move used tab key.
   $(function(){
     const parentLi = $('nav>ul>li');
     const childLi = $('nav>ul>li>ul');
@@ -27,7 +34,7 @@ export default function Header( {clickBrand} ){
     parentLi.children('a').on('focus', function(e){
       e.preventDefault();
       const nextUl = $(this).next('ul');
-      const nextLi = $(nextUl).next('li');
+      // const nextLi = $(nextUl).next('li');
       const hasUl = nextUl[0] !== undefined;
       if( hasUl ){nextUl.show();} else{nextUl.hide();}
       // nextUl.show();
@@ -42,7 +49,6 @@ export default function Header( {clickBrand} ){
     })
     // childLi.not(':has(a[class = "focusNav"])').hide();
   })
-
   return(
     <header>
       <div>
@@ -51,7 +57,9 @@ export default function Header( {clickBrand} ){
         </h1>
         <ul>
           <li>
-            <Link to="/login">로그인</Link>
+            {
+              myLog.token === null ? <Link to="/login" className='loginBtn'>로그인</Link> : <LogOut handler={handler} />
+            }
           </li>
           <li>
             <Link to="*">마이페이지</Link>
@@ -84,9 +92,9 @@ export default function Header( {clickBrand} ){
               </ul>
             </li>
             <li>
-              <Link to="Community">Community</Link>
+              <Link to>Community</Link>
               <ul>
-                <li><Link to>공지사항</Link></li>
+                <li><Link to="Community">공지사항</Link></li>
                 <li><Link to>FAQ</Link></li>
                 <li><Link to>이벤트</Link></li>
               </ul>

@@ -33,22 +33,21 @@
   cursor: pointer;
 }
 
-.logBox>form>div{
-  border-top: 1px solid #bbb;
-  padding: 20px 0 110px;
+.logBox>div{
+  padding: 30px 55px;
 }
-.logBox>form>div>p{
+.logBox>div>p{
   display: flex;
   justify-content: space-between;
 }
-.logBox>form>div>p>span{
+.logBox>div>p>span{
   display: flex;
 }
-.logBox>form>div>p a{
+.logBox>div>p a{
   padding: 0 10px;
   font-size: 15px;
   color: #333;
 }
-.logBox>form>div>p>span>a:nth-of-type(1){
+.logBox>div>p>span>a:nth-of-type(1){
   border-right: 1px solid #333;
 }

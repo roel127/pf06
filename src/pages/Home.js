@@ -2,6 +2,7 @@ import './Home.css';
 import data from '../product.json';
 import { Link } from 'react-router-dom';
 import { SwiperBanner, SwiperProduct } from './sep/Swiper';
+import { useSelector } from 'react-redux/es/hooks/useSelector';
 
 export default function Home(){
   const bestItems = data.best;

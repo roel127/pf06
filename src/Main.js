@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import App from './components/App';
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
@@ -32,7 +32,7 @@ export default function Main(){
     }
   }
   return(
-    <BrowserRouter>
+    <Router>
       <App clickBrand={clickBrand}>
         <Routes>
           <Route path="/" element={<Home foo={testResult} />} />
@@ -52,6 +52,6 @@ export default function Main(){
           <Route path="/login" element={<LogIn />} />
         </Routes>
       </App>
-    </BrowserRouter>
+    </Router>
   )
 }
